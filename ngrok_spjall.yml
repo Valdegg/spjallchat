@@ -1,0 +1,9 @@
+version: "2"
+tunnels:
+  http:
+    proto: http
+    addr: 8080
+    domain: chat.spjall.chat
+  websocket:
+    proto: http
+    addr: 8081

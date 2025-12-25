@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spjall</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Loading State -->
+        <div id="loading" class="state">
+            <div class="status">Connecting...</div>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="state" style="display: none;">
+            <div class="status error"></div>
+        </div>
+
+        <!-- Main Chat Interface -->
+        <div id="main" class="container" style="display: none;">
+            <!-- Chat Area (Left) -->
+            <div class="chat-area">
+                <div class="chat-header">
+                    <span id="conversation-name">Lobby</span>
+                </div>
+                <div class="messages" id="messages">
+                    <!-- Messages will be inserted here -->
+                </div>
+                <div class="input-area">
+                    <input 
+                        type="text" 
+                        id="message-input" 
+                        placeholder="Type a message..." 
+                        autocomplete="off"
+                        maxlength="4000"
+                    >
+                </div>
+            </div>
+
+            <!-- Sidebar (Right) -->
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <div class="section-header">Conversations</div>
+                    <div class="conversation-item active" data-id="1"><span># Lobby</span></div>
+                    <div id="dm-list">
+                        <!-- DMs will be inserted here -->
+                    </div>
+                    <div id="group-list">
+                        <!-- Groups will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="section-header">Online <span id="online-count">(0)</span></div>
+                    <div id="online-users">
+                        <!-- Online users will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="sidebar-section">
+                    <div class="section-header">Offline <span id="offline-count">(0)</span></div>
+                    <div id="offline-users">
+                        <!-- Offline users will be inserted here -->
+                    </div>
+                </div>
+
+                <div class="sidebar-section sidebar-footer">
+                    <div class="user-info">
+                        <span id="current-user">—</span>
+                    </div>
+                    <button id="group-btn" class="btn-small">+ Group</button>
+                    <button id="invite-btn" class="btn-small">+ Invite</button>
+                    <button id="logout-btn" class="btn-small btn-dim">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Invite Modal -->
+    <div id="invite-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">Invite Link</div>
+            <div class="modal-body">
+                <input type="text" id="invite-url" readonly>
+                <button id="copy-invite" class="btn-small">Copy</button>
+            </div>
+            <div class="modal-footer">
+                <button id="close-invite" class="btn-small btn-dim">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Group Modal -->
+    <div id="group-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">New Group Chat</div>
+            <div class="modal-body" style="flex-direction: column; gap: 8px;">
+                <div style="color: var(--text-dim); font-size: 11px; margin-bottom: 4px;">Select members:</div>
+                <div id="group-user-list" style="max-height: 200px; overflow-y: auto;"></div>
+            </div>
+            <div class="modal-footer" style="display: flex; gap: 8px; justify-content: flex-end;">
+                <button id="close-group" class="btn-small btn-dim">Cancel</button>
+                <button id="create-group" class="btn-small">Create</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
+

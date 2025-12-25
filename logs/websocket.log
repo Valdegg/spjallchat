@@ -1,0 +1,28 @@
+=== Spjall WebSocket Server ===
+Listening on ws://0.0.0.0:8081
+Press Ctrl+C to stop
+
+[+] New connection: ws_694d73b31b4e7
+[*] Handshake complete: ws_694d73b31b4e7
+[<] ws_694d73b31b4e7: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694d73b31b4e7: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694d73b31b4e7: {"type":"load_history","payload":{"conversation_id":1,"before":1766683571,"limit":50}}
+[>] ws_694d73b31b4e7: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694d73b31b4e7: {"type":"create_invite","payload":{}}
+[>] ws_694d73b31b4e7: {"type":"invite_created","payload":{"code":"Z6G8EN9U","url":"https:\/\/chat.spja...
+[<] ws_694d73b31b4e7: {"type":"create_invite","payload":{}}
+[>] ws_694d73b31b4e7: {"type":"invite_created","payload":{"code":"6S9UD2BW","url":"https:\/\/chat.spja...
+[<] ws_694d73b31b4e7: {"type":"ping","payload":{}}
+[>] ws_694d73b31b4e7: {"type":"pong","payload":[]}
+[<] ws_694d73b31b4e7: {"type":"ping","payload":{}}
+[>] ws_694d73b31b4e7: {"type":"pong","payload":[]}
+[<] ws_694d73b31b4e7: {"type":"create_invite","payload":{}}
+[>] ws_694d73b31b4e7: {"type":"invite_created","payload":{"code":"XSNXF99L","url":"https:\/\/chat.spja...
+[<] ws_694d73b31b4e7: {"type":"ping","payload":{}}
+[>] ws_694d73b31b4e7: {"type":"pong","payload":[]}
+[<] ws_694d73b31b4e7: {"type":"create_invite","payload":{}}
+[>] ws_694d73b31b4e7: {"type":"invite_created","payload":{"code":"YRCT6796","url":"https:\/\/chat.spja...
+[<] ws_694d73b31b4e7: {"type":"ping","payload":{}}
+[>] ws_694d73b31b4e7: {"type":"pong","payload":[]}
+[<] ws_694d73b31b4e7: {"type":"ping","payload":{}}
+[>] ws_694d73b31b4e7: {"type":"pong","payload":[]}

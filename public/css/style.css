@@ -1,0 +1,340 @@
+/* Spjall - Retro Terminal Chat */
+
+:root {
+    --bg: #0a0a0f;
+    --bg-secondary: #101018;
+    --bg-hover: #18181f;
+    --text: #b0b0b0;
+    --text-bright: #e0e0e0;
+    --text-dim: #505050;
+    --accent: #5a9;
+    --accent-dim: #486;
+    --border: #252530;
+    --online: #5a5;
+    --offline: #555;
+    --error: #a55;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', 'Monaco', 'Menlo', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+#app {
+    height: 100%;
+}
+
+/* States */
+.state {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.status {
+    color: var(--text-dim);
+}
+
+.status.error {
+    color: var(--error);
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    height: 100%;
+}
+
+/* Chat Area */
+.chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border);
+}
+
+.chat-header {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-bright);
+    font-weight: 500;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 12px;
+}
+
+.message {
+    margin: 2px 0;
+    word-wrap: break-word;
+}
+
+.message .nick {
+    color: var(--accent);
+}
+
+.message .nick.self {
+    color: var(--text-bright);
+}
+
+.message .time {
+    color: var(--text-dim);
+    font-size: 11px;
+    margin-right: 6px;
+}
+
+.message .text {
+    color: var(--text);
+}
+
+.message.system {
+    color: var(--text-dim);
+    font-style: italic;
+}
+
+.input-area {
+    padding: 8px 12px;
+    border-top: 1px solid var(--border);
+}
+
+#message-input {
+    width: 100%;
+    padding: 8px 10px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--text-bright);
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+#message-input:focus {
+    border-color: var(--accent-dim);
+}
+
+#message-input::placeholder {
+    color: var(--text-dim);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+}
+
+.sidebar-section {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.sidebar-section:last-child {
+    border-bottom: none;
+}
+
+.section-header {
+    padding: 4px 12px;
+    color: var(--text-dim);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.conversation-item {
+    padding: 4px 12px;
+    cursor: pointer;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.conversation-item:hover {
+    background: var(--bg-hover);
+}
+
+.conversation-item.active {
+    background: var(--bg-hover);
+    color: var(--text-bright);
+}
+
+.conversation-item .unread-badge {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+}
+
+.conversation-item.active .unread-badge {
+    display: none;
+}
+
+.user-item {
+    padding: 3px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.user-item:hover {
+    background: var(--bg-hover);
+}
+
+.user-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--online);
+}
+
+.user-dot.offline {
+    background: var(--offline);
+}
+
+.user-name {
+    color: var(--text);
+    font-size: 12px;
+}
+
+/* Sidebar Footer */
+.sidebar-footer {
+    margin-top: auto;
+    padding: 12px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.user-info {
+    color: var(--text-bright);
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.btn-small {
+    padding: 4px 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.btn-small:hover {
+    background: var(--bg-hover);
+    color: var(--text-bright);
+}
+
+.btn-dim {
+    color: var(--text-dim);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 16px;
+    min-width: 300px;
+}
+
+.modal-header {
+    color: var(--text-bright);
+    margin-bottom: 12px;
+}
+
+.modal-body {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.modal-body input {
+    flex: 1;
+    padding: 6px 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text-bright);
+    font-family: inherit;
+    font-size: 12px;
+}
+
+.modal-footer {
+    text-align: right;
+}
+
+/* Group user selection */
+.group-user-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    cursor: pointer;
+}
+
+.group-user-option:hover {
+    background: var(--bg-hover);
+}
+
+.group-user-option input[type="checkbox"] {
+    accent-color: var(--accent);
+}
+
+.group-user-option label {
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-dim);
+}
+
+/* Loading history indicator */
+.loading-history {
+    text-align: center;
+    padding: 8px;
+    color: var(--text-dim);
+    font-size: 11px;
+}
+

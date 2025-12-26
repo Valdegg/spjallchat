@@ -2,27 +2,802 @@
 Listening on ws://0.0.0.0:8081
 Press Ctrl+C to stop
 
-[+] New connection: ws_694d73b31b4e7
-[*] Handshake complete: ws_694d73b31b4e7
-[<] ws_694d73b31b4e7: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
-[>] ws_694d73b31b4e7: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
-[<] ws_694d73b31b4e7: {"type":"load_history","payload":{"conversation_id":1,"before":1766683571,"limit":50}}
-[>] ws_694d73b31b4e7: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
-[<] ws_694d73b31b4e7: {"type":"create_invite","payload":{}}
-[>] ws_694d73b31b4e7: {"type":"invite_created","payload":{"code":"Z6G8EN9U","url":"https:\/\/chat.spja...
-[<] ws_694d73b31b4e7: {"type":"create_invite","payload":{}}
-[>] ws_694d73b31b4e7: {"type":"invite_created","payload":{"code":"6S9UD2BW","url":"https:\/\/chat.spja...
-[<] ws_694d73b31b4e7: {"type":"ping","payload":{}}
-[>] ws_694d73b31b4e7: {"type":"pong","payload":[]}
-[<] ws_694d73b31b4e7: {"type":"ping","payload":{}}
-[>] ws_694d73b31b4e7: {"type":"pong","payload":[]}
-[<] ws_694d73b31b4e7: {"type":"create_invite","payload":{}}
-[>] ws_694d73b31b4e7: {"type":"invite_created","payload":{"code":"XSNXF99L","url":"https:\/\/chat.spja...
-[<] ws_694d73b31b4e7: {"type":"ping","payload":{}}
-[>] ws_694d73b31b4e7: {"type":"pong","payload":[]}
-[<] ws_694d73b31b4e7: {"type":"create_invite","payload":{}}
-[>] ws_694d73b31b4e7: {"type":"invite_created","payload":{"code":"YRCT6796","url":"https:\/\/chat.spja...
-[<] ws_694d73b31b4e7: {"type":"ping","payload":{}}
-[>] ws_694d73b31b4e7: {"type":"pong","payload":[]}
-[<] ws_694d73b31b4e7: {"type":"ping","payload":{}}
-[>] ws_694d73b31b4e7: {"type":"pong","payload":[]}
+[+] New connection: ws_694ec481e6ac7
+[*] Handshake complete: ws_694ec481e6ac7
+[<] ws_694ec481e6ac7: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec481e6ac7: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec481e6ac7: {"type":"load_history","payload":{"conversation_id":1,"before":1766678506,"limit":50}}
+[>] ws_694ec481e6ac7: {"type":"history","payload":{"conversation_id":1,"messages":[],"has_more":false,...
+[-] Disconnected: ws_694ec481e6ac7
+[>] ws_694ec481e6ac7: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec496cddec
+[*] Handshake complete: ws_694ec496cddec
+[<] ws_694ec496cddec: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec496cddec: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec496cddec: {"type":"load_history","payload":{"conversation_id":1,"before":1766769814,"limit":50}}
+[>] ws_694ec496cddec: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec496cddec: {"type":"ping","payload":{}}
+[>] ws_694ec496cddec: {"type":"pong","payload":[]}
+[<] ws_694ec496cddec: {"type":"ping","payload":{}}
+[>] ws_694ec496cddec: {"type":"pong","payload":[]}
+[<] ws_694ec496cddec: {"type":"ping","payload":{}}
+[>] ws_694ec496cddec: {"type":"pong","payload":[]}
+[<] ws_694ec496cddec: {"type":"ping","payload":{}}
+[>] ws_694ec496cddec: {"type":"pong","payload":[]}
+[<] ws_694ec496cddec: {"type":"ping","payload":{}}
+[>] ws_694ec496cddec: {"type":"pong","payload":[]}
+[<] ws_694ec496cddec: {"type":"ping","payload":{}}
+[>] ws_694ec496cddec: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec496cddec
+[>] ws_694ec496cddec: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec57181a29
+[*] Handshake complete: ws_694ec57181a29
+[<] ws_694ec57181a29: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec57181a29: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec57181a29: {"type":"load_history","payload":{"conversation_id":1,"before":1766678506,"limit":50}}
+[>] ws_694ec57181a29: {"type":"history","payload":{"conversation_id":1,"messages":[],"has_more":false,...
+[-] Disconnected: ws_694ec57181a29
+[>] ws_694ec57181a29: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec58b55293
+[*] Handshake complete: ws_694ec58b55293
+[<] ws_694ec58b55293: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec58b55293: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec58b55293: {"type":"load_history","payload":{"conversation_id":1,"before":1766770059,"limit":50}}
+[>] ws_694ec58b55293: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[-] Disconnected: ws_694ec58b55293
+[>] ws_694ec58b55293: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec59932033
+[*] Handshake complete: ws_694ec59932033
+[<] ws_694ec59932033: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec59932033: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec59932033: {"type":"load_history","payload":{"conversation_id":1,"before":1766770073,"limit":50}}
+[>] ws_694ec59932033: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec59932033: {"type":"ping","payload":{}}
+[>] ws_694ec59932033: {"type":"pong","payload":[]}
+[<] ws_694ec59932033: {"type":"ping","payload":{}}
+[>] ws_694ec59932033: {"type":"pong","payload":[]}
+[<] ws_694ec59932033: {"type":"ping","payload":{}}
+[>] ws_694ec59932033: {"type":"pong","payload":[]}
+[<] ws_694ec59932033: {"type":"ping","payload":{}}
+[>] ws_694ec59932033: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec59932033
+[>] ws_694ec59932033: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec61eaedec
+[*] Handshake complete: ws_694ec61eaedec
+[<] ws_694ec61eaedec: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec61eaedec: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec61eaedec: {"type":"load_history","payload":{"conversation_id":1,"before":1766770206,"limit":50}}
+[>] ws_694ec61eaedec: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec61eaedec: {"type":"ping","payload":{}}
+[>] ws_694ec61eaedec: {"type":"pong","payload":[]}
+[<] ws_694ec61eaedec: {"type":"ping","payload":{}}
+[>] ws_694ec61eaedec: {"type":"pong","payload":[]}
+[<] ws_694ec61eaedec: {"type":"ping","payload":{}}
+[>] ws_694ec61eaedec: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec61eaedec
+[>] ws_694ec61eaedec: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec67ebd5c8
+[*] Handshake complete: ws_694ec67ebd5c8
+[<] ws_694ec67ebd5c8: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec67ebd5c8: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec67ebd5c8: {"type":"load_history","payload":{"conversation_id":1,"before":1766770302,"limit":50}}
+[>] ws_694ec67ebd5c8: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec67ebd5c8: {"type":"ping","payload":{}}
+[>] ws_694ec67ebd5c8: {"type":"pong","payload":[]}
+[<] ws_694ec67ebd5c8: {"type":"send_message","payload":{"conversation_id":1,"content":"hi"}}
+[>] ws_694ec67ebd5c8: {"type":"message","payload":{"id":37,"conversation_id":1,"user_id":4,"content":"...
+[-] Disconnected: ws_694ec67ebd5c8
+[>] ws_694ec67ebd5c8: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec6b54334b
+[*] Handshake complete: ws_694ec6b54334b
+[<] ws_694ec6b54334b: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec6b54334b: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec6b54334b: {"type":"load_history","payload":{"conversation_id":1,"before":1766770357,"limit":50}}
+[>] ws_694ec6b54334b: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec6b54334b: {"type":"ping","payload":{}}
+[>] ws_694ec6b54334b: {"type":"pong","payload":[]}
+[<] ws_694ec6b54334b: {"type":"ping","payload":{}}
+[>] ws_694ec6b54334b: {"type":"pong","payload":[]}
+[<] ws_694ec6b54334b: {"type":"ping","payload":{}}
+[>] ws_694ec6b54334b: {"type":"pong","payload":[]}
+[<] ws_694ec6b54334b: {"type":"ping","payload":{}}
+[>] ws_694ec6b54334b: {"type":"pong","payload":[]}
+[<] ws_694ec6b54334b: {"type":"ping","payload":{}}
+[>] ws_694ec6b54334b: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec6b54334b
+[>] ws_694ec6b54334b: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec75028bdc
+[*] Handshake complete: ws_694ec75028bdc
+[<] ws_694ec75028bdc: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec75028bdc: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec75028bdc: {"type":"load_history","payload":{"conversation_id":1,"before":1766770512,"limit":50}}
+[>] ws_694ec75028bdc: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec75028bdc: {"type":"ping","payload":{}}
+[>] ws_694ec75028bdc: {"type":"pong","payload":[]}
+[<] ws_694ec75028bdc: {"type":"ping","payload":{}}
+[>] ws_694ec75028bdc: {"type":"pong","payload":[]}
+[<] ws_694ec75028bdc: {"type":"ping","payload":{}}
+[>] ws_694ec75028bdc: {"type":"pong","payload":[]}
+[<] ws_694ec75028bdc: {"type":"ping","payload":{}}
+[>] ws_694ec75028bdc: {"type":"pong","payload":[]}
+[<] ws_694ec75028bdc: {"type":"ping","payload":{}}
+[>] ws_694ec75028bdc: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec75028bdc
+[>] ws_694ec75028bdc: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec7eb38c36
+[*] Handshake complete: ws_694ec7eb38c36
+[<] ws_694ec7eb38c36: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec7eb38c36: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec7eb38c36: {"type":"load_history","payload":{"conversation_id":1,"before":1766770667,"limit":50}}
+[>] ws_694ec7eb38c36: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec7eb38c36: {"type":"ping","payload":{}}
+[>] ws_694ec7eb38c36: {"type":"pong","payload":[]}
+[<] ws_694ec7eb38c36: {"type":"ping","payload":{}}
+[>] ws_694ec7eb38c36: {"type":"pong","payload":[]}
+[<] ws_694ec7eb38c36: {"type":"ping","payload":{}}
+[>] ws_694ec7eb38c36: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec7eb38c36
+[>] ws_694ec7eb38c36: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec84a58b8c
+[*] Handshake complete: ws_694ec84a58b8c
+[<] ws_694ec84a58b8c: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec84a58b8c: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec84a58b8c: {"type":"load_history","payload":{"conversation_id":1,"before":1766770762,"limit":50}}
+[>] ws_694ec84a58b8c: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec84a58b8c: {"type":"ping","payload":{}}
+[>] ws_694ec84a58b8c: {"type":"pong","payload":[]}
+[<] ws_694ec84a58b8c: {"type":"ping","payload":{}}
+[>] ws_694ec84a58b8c: {"type":"pong","payload":[]}
+[<] ws_694ec84a58b8c: {"type":"ping","payload":{}}
+[>] ws_694ec84a58b8c: {"type":"pong","payload":[]}
+[<] ws_694ec84a58b8c: {"type":"ping","payload":{}}
+[>] ws_694ec84a58b8c: {"type":"pong","payload":[]}
+[<] ws_694ec84a58b8c: {"type":"ping","payload":{}}
+[>] ws_694ec84a58b8c: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec84a58b8c
+[>] ws_694ec84a58b8c: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec8e1e11ed
+[*] Handshake complete: ws_694ec8e1e11ed
+[<] ws_694ec8e1e11ed: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec8e1e11ed: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec8e1e11ed: {"type":"load_history","payload":{"conversation_id":1,"before":1766770914,"limit":50}}
+[>] ws_694ec8e1e11ed: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec8e1e11ed: {"type":"ping","payload":{}}
+[>] ws_694ec8e1e11ed: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec8e1e11ed
+[>] ws_694ec8e1e11ed: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec90c3481e
+[*] Handshake complete: ws_694ec90c3481e
+[<] ws_694ec90c3481e: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec90c3481e: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec90c3481e: {"type":"load_history","payload":{"conversation_id":1,"before":1766770956,"limit":50}}
+[>] ws_694ec90c3481e: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec90c3481e: {"type":"ping","payload":{}}
+[>] ws_694ec90c3481e: {"type":"pong","payload":[]}
+[<] ws_694ec90c3481e: {"type":"ping","payload":{}}
+[>] ws_694ec90c3481e: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec90c3481e
+[>] ws_694ec90c3481e: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec94eeda14
+[*] Handshake complete: ws_694ec94eeda14
+[<] ws_694ec94eeda14: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec94eeda14: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec94eeda14: {"type":"load_history","payload":{"conversation_id":1,"before":1766771023,"limit":50}}
+[>] ws_694ec94eeda14: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec94eeda14: {"type":"ping","payload":{}}
+[>] ws_694ec94eeda14: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec94eeda14
+[>] ws_694ec94eeda14: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec98205c75
+[*] Handshake complete: ws_694ec98205c75
+[<] ws_694ec98205c75: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec98205c75: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec98205c75: {"type":"load_history","payload":{"conversation_id":1,"before":1766771074,"limit":50}}
+[>] ws_694ec98205c75: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec98205c75: {"type":"ping","payload":{}}
+[>] ws_694ec98205c75: {"type":"pong","payload":[]}
+[<] ws_694ec98205c75: {"type":"ping","payload":{}}
+[>] ws_694ec98205c75: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec98205c75
+[>] ws_694ec98205c75: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ec9d5c4815
+[*] Handshake complete: ws_694ec9d5c4815
+[<] ws_694ec9d5c4815: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ec9d5c4815: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ec9d5c4815: {"type":"load_history","payload":{"conversation_id":1,"before":1766771158,"limit":50}}
+[>] ws_694ec9d5c4815: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ec9d5c4815: {"type":"send_message","payload":{"conversation_id":1,"content":"jæja drengir bíp bíp"}}
+[>] ws_694ec9d5c4815: {"type":"message","payload":{"id":38,"conversation_id":1,"user_id":4,"content":"...
+[<] ws_694ec9d5c4815: {"type":"ping","payload":{}}
+[>] ws_694ec9d5c4815: {"type":"pong","payload":[]}
+[<] ws_694ec9d5c4815: {"type":"ping","payload":{}}
+[>] ws_694ec9d5c4815: {"type":"pong","payload":[]}
+[<] ws_694ec9d5c4815: {"type":"ping","payload":{}}
+[>] ws_694ec9d5c4815: {"type":"pong","payload":[]}
+[<] ws_694ec9d5c4815: {"type":"ping","payload":{}}
+[>] ws_694ec9d5c4815: {"type":"pong","payload":[]}
+[<] ws_694ec9d5c4815: {"type":"ping","payload":{}}
+[>] ws_694ec9d5c4815: {"type":"pong","payload":[]}
+[<] ws_694ec9d5c4815: {"type":"ping","payload":{}}
+[>] ws_694ec9d5c4815: {"type":"pong","payload":[]}
+[<] ws_694ec9d5c4815: {"type":"ping","payload":{}}
+[>] ws_694ec9d5c4815: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ec9d5c4815
+[>] ws_694ec9d5c4815: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecac341b06
+[*] Handshake complete: ws_694ecac341b06
+[<] ws_694ecac341b06: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecac341b06: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecac341b06: {"type":"load_history","payload":{"conversation_id":1,"before":1766771395,"limit":50}}
+[>] ws_694ecac341b06: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecac341b06: {"type":"ping","payload":{}}
+[>] ws_694ecac341b06: {"type":"pong","payload":[]}
+[<] ws_694ecac341b06: {"type":"ping","payload":{}}
+[>] ws_694ecac341b06: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ecac341b06
+[>] ws_694ecac341b06: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecb1cba362
+[*] Handshake complete: ws_694ecb1cba362
+[<] ws_694ecb1cba362: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecb1cba362: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecb1cba362: {"type":"load_history","payload":{"conversation_id":1,"before":1766771485,"limit":50}}
+[>] ws_694ecb1cba362: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecb1cba362: {"type":"ping","payload":{}}
+[>] ws_694ecb1cba362: {"type":"pong","payload":[]}
+[<] ws_694ecb1cba362: {"type":"ping","payload":{}}
+[>] ws_694ecb1cba362: {"type":"pong","payload":[]}
+[<] ws_694ecb1cba362: {"type":"ping","payload":{}}
+[>] ws_694ecb1cba362: {"type":"pong","payload":[]}
+[<] ws_694ecb1cba362: {"type":"ping","payload":{}}
+[>] ws_694ecb1cba362: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ecb1cba362
+[>] ws_694ecb1cba362: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecb9e40bb6
+[*] Handshake complete: ws_694ecb9e40bb6
+[<] ws_694ecb9e40bb6: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecb9e40bb6: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecb9e40bb6: {"type":"load_history","payload":{"conversation_id":1,"before":1766771614,"limit":50}}
+[>] ws_694ecb9e40bb6: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecb9e40bb6: {"type":"ping","payload":{}}
+[>] ws_694ecb9e40bb6: {"type":"pong","payload":[]}
+[<] ws_694ecb9e40bb6: {"type":"load_history","payload":{"conversation_id":4,"before":1766771662,"limit":50}}
+[>] ws_694ecb9e40bb6: {"type":"history","payload":{"conversation_id":4,"messages":[{"id":28,"conversat...
+[<] ws_694ecb9e40bb6: {"type":"load_history","payload":{"conversation_id":3,"before":1766771664,"limit":50}}
+[>] ws_694ecb9e40bb6: {"type":"history","payload":{"conversation_id":3,"messages":[{"id":25,"conversat...
+[<] ws_694ecb9e40bb6: {"type":"ping","payload":{}}
+[>] ws_694ecb9e40bb6: {"type":"pong","payload":[]}
+[<] ws_694ecb9e40bb6: {"type":"ping","payload":{}}
+[>] ws_694ecb9e40bb6: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ecb9e40bb6
+[>] ws_694ecb9e40bb6: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecc01e9157
+[*] Handshake complete: ws_694ecc01e9157
+[<] ws_694ecc01e9157: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecc01e9157: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecc01e9157: {"type":"load_history","payload":{"conversation_id":1,"before":1766771714,"limit":50}}
+[>] ws_694ecc01e9157: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecc01e9157: {"type":"create_group","payload":{"user_ids":[5,6]}}
+[>] ws_694ecc01e9157: {"type":"conversation_created","payload":{"conversation":{"id":5,"type":"group",...
+[<] ws_694ecc01e9157: {"type":"load_history","payload":{"conversation_id":5,"before":1766771728,"limit":50}}
+[>] ws_694ecc01e9157: {"type":"history","payload":{"conversation_id":5,"messages":[],"has_more":false,...
+[<] ws_694ecc01e9157: {"type":"send_message","payload":{"conversation_id":5,"content":"jæja hvað finnst ykkur þá?"}}
+[>] ws_694ecc01e9157: {"type":"message","payload":{"id":39,"conversation_id":5,"user_id":4,"content":"...
+[-] Disconnected: ws_694ecc01e9157
+[>] ws_694ecc01e9157: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecc4098de7
+[*] Handshake complete: ws_694ecc4098de7
+[<] ws_694ecc4098de7: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecc4098de7: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecc4098de7: {"type":"load_history","payload":{"conversation_id":1,"before":1766771777,"limit":50}}
+[>] ws_694ecc4098de7: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecc4098de7: {"type":"ping","payload":{}}
+[>] ws_694ecc4098de7: {"type":"pong","payload":[]}
+[<] ws_694ecc4098de7: {"type":"ping","payload":{}}
+[>] ws_694ecc4098de7: {"type":"pong","payload":[]}
+[<] ws_694ecc4098de7: {"type":"ping","payload":{}}
+[>] ws_694ecc4098de7: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ecc4098de7
+[>] ws_694ecc4098de7: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694eccb748514
+[*] Handshake complete: ws_694eccb748514
+[<] ws_694eccb748514: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694eccb748514: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694eccb748514: {"type":"load_history","payload":{"conversation_id":1,"before":1766771895,"limit":50}}
+[>] ws_694eccb748514: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694eccb748514: {"type":"send_message","payload":{"conversation_id":1,"content":"einn"}}
+[>] ws_694eccb748514: {"type":"message","payload":{"id":40,"conversation_id":1,"user_id":4,"content":"...
+[<] ws_694eccb748514: {"type":"send_message","payload":{"conversation_id":1,"content":"tveir"}}
+[>] ws_694eccb748514: {"type":"message","payload":{"id":41,"conversation_id":1,"user_id":4,"content":"...
+[<] ws_694eccb748514: {"type":"ping","payload":{}}
+[>] ws_694eccb748514: {"type":"pong","payload":[]}
+[<] ws_694eccb748514: {"type":"ping","payload":{}}
+[>] ws_694eccb748514: {"type":"pong","payload":[]}
+[<] ws_694eccb748514: {"type":"ping","payload":{}}
+[>] ws_694eccb748514: {"type":"pong","payload":[]}
+[<] ws_694eccb748514: {"type":"ping","payload":{}}
+[>] ws_694eccb748514: {"type":"pong","payload":[]}
+[<] ws_694eccb748514: {"type":"ping","payload":{}}
+[>] ws_694eccb748514: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694eccb748514
+[>] ws_694eccb748514: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecd552bdca
+[*] Handshake complete: ws_694ecd552bdca
+[<] ws_694ecd552bdca: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecd552bdca: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecd552bdca: {"type":"load_history","payload":{"conversation_id":1,"before":1766772053,"limit":50}}
+[>] ws_694ecd552bdca: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[-] Disconnected: ws_694ecd552bdca
+[>] ws_694ecd552bdca: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecd60d2675
+[*] Handshake complete: ws_694ecd60d2675
+[<] ws_694ecd60d2675: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecd60d2675: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecd60d2675: {"type":"load_history","payload":{"conversation_id":1,"before":1766772065,"limit":50}}
+[>] ws_694ecd60d2675: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[-] Disconnected: ws_694ecd60d2675
+[>] ws_694ecd60d2675: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecd6cb7a13
+[*] Handshake complete: ws_694ecd6cb7a13
+[<] ws_694ecd6cb7a13: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecd6cb7a13: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecd6cb7a13: {"type":"load_history","payload":{"conversation_id":1,"before":1766772076,"limit":50}}
+[>] ws_694ecd6cb7a13: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[-] Disconnected: ws_694ecd6cb7a13
+[>] ws_694ecd6cb7a13: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecd80d484c
+[*] Handshake complete: ws_694ecd80d484c
+[<] ws_694ecd80d484c: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecd80d484c: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecd80d484c: {"type":"load_history","payload":{"conversation_id":1,"before":1766772097,"limit":50}}
+[>] ws_694ecd80d484c: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecd80d484c: {"type":"ping","payload":{}}
+[>] ws_694ecd80d484c: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ecd80d484c
+[>] ws_694ecd80d484c: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecdb6e9fee
+[*] Handshake complete: ws_694ecdb6e9fee
+[<] ws_694ecdb6e9fee: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecdb6e9fee: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecdb6e9fee: {"type":"load_history","payload":{"conversation_id":1,"before":1766772151,"limit":50}}
+[>] ws_694ecdb6e9fee: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecdb6e9fee: {"type":"ping","payload":{}}
+[>] ws_694ecdb6e9fee: {"type":"pong","payload":[]}
+[<] ws_694ecdb6e9fee: {"type":"ping","payload":{}}
+[>] ws_694ecdb6e9fee: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ecdb6e9fee
+[>] ws_694ecdb6e9fee: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecdf3d35d6
+[*] Handshake complete: ws_694ecdf3d35d6
+[<] ws_694ecdf3d35d6: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecdf3d35d6: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecdf3d35d6: {"type":"load_history","payload":{"conversation_id":1,"before":1766772212,"limit":50}}
+[>] ws_694ecdf3d35d6: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecdf3d35d6: {"type":"ping","payload":{}}
+[>] ws_694ecdf3d35d6: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ecdf3d35d6
+[>] ws_694ecdf3d35d6: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ece176eba9
+[*] Handshake complete: ws_694ece176eba9
+[<] ws_694ece176eba9: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ece176eba9: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ece176eba9: {"type":"load_history","payload":{"conversation_id":1,"before":1766772247,"limit":50}}
+[>] ws_694ece176eba9: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ece176eba9: {"type":"ping","payload":{}}
+[>] ws_694ece176eba9: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ece176eba9
+[>] ws_694ece176eba9: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ece4f286ee
+[*] Handshake complete: ws_694ece4f286ee
+[<] ws_694ece4f286ee: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ece4f286ee: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ece4f286ee: {"type":"load_history","payload":{"conversation_id":1,"before":1766772303,"limit":50}}
+[>] ws_694ece4f286ee: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ece4f286ee: {"type":"ping","payload":{}}
+[>] ws_694ece4f286ee: {"type":"pong","payload":[]}
+[<] ws_694ece4f286ee: {"type":"ping","payload":{}}
+[>] ws_694ece4f286ee: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ece4f286ee
+[>] ws_694ece4f286ee: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecea5913ff
+[*] Handshake complete: ws_694ecea5913ff
+[<] ws_694ecea5913ff: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecea5913ff: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecea5913ff: {"type":"load_history","payload":{"conversation_id":1,"before":1766772389,"limit":50}}
+[>] ws_694ecea5913ff: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecea5913ff: {"type":"ping","payload":{}}
+[>] ws_694ecea5913ff: {"type":"pong","payload":[]}
+[<] ws_694ecea5913ff: {"type":"ping","payload":{}}
+[>] ws_694ecea5913ff: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ecea5913ff
+[>] ws_694ecea5913ff: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecee61cf45
+[*] Handshake complete: ws_694ecee61cf45
+[<] ws_694ecee61cf45: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecee61cf45: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecee61cf45: {"type":"load_history","payload":{"conversation_id":1,"before":1766772454,"limit":50}}
+[>] ws_694ecee61cf45: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecee61cf45: {"type":"ping","payload":{}}
+[>] ws_694ecee61cf45: {"type":"pong","payload":[]}
+[<] ws_694ecee61cf45: {"type":"ping","payload":{}}
+[>] ws_694ecee61cf45: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ecee61cf45
+[>] ws_694ecee61cf45: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecf3440ed4
+[*] Handshake complete: ws_694ecf3440ed4
+[<] ws_694ecf3440ed4: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecf3440ed4: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecf3440ed4: {"type":"load_history","payload":{"conversation_id":1,"before":1766772532,"limit":50}}
+[>] ws_694ecf3440ed4: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecf3440ed4: {"type":"ping","payload":{}}
+[>] ws_694ecf3440ed4: {"type":"pong","payload":[]}
+[<] ws_694ecf3440ed4: {"type":"create_invite","payload":{}}
+[>] ws_694ecf3440ed4: {"type":"invite_created","payload":{"code":"A7S2BZKC","url":"https:\/\/chat.spja...
+[<] ws_694ecf3440ed4: {"type":"ping","payload":{}}
+[>] ws_694ecf3440ed4: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ecf3440ed4
+[>] ws_694ecf3440ed4: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ecf7deee2c
+[*] Handshake complete: ws_694ecf7deee2c
+[<] ws_694ecf7deee2c: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ecf7deee2c: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ecf7deee2c: {"type":"load_history","payload":{"conversation_id":1,"before":1766772606,"limit":50}}
+[>] ws_694ecf7deee2c: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ecf7deee2c: {"type":"ping","payload":{}}
+[>] ws_694ecf7deee2c: {"type":"pong","payload":[]}
+[<] ws_694ecf7deee2c: {"type":"ping","payload":{}}
+[>] ws_694ecf7deee2c: {"type":"pong","payload":[]}
+[<] ws_694ecf7deee2c: {"type":"ping","payload":{}}
+[>] ws_694ecf7deee2c: {"type":"pong","payload":[]}
+[<] ws_694ecf7deee2c: {"type":"ping","payload":{}}
+[>] ws_694ecf7deee2c: {"type":"pong","payload":[]}
+[<] ws_694ecf7deee2c: {"type":"ping","payload":{}}
+[>] ws_694ecf7deee2c: {"type":"pong","payload":[]}
+[<] ws_694ecf7deee2c: {"type":"ping","payload":{}}
+[>] ws_694ecf7deee2c: {"type":"pong","payload":[]}
+[<] ws_694ecf7deee2c: {"type":"ping","payload":{}}
+[>] ws_694ecf7deee2c: {"type":"pong","payload":[]}
+[<] ws_694ecf7deee2c: {"type":"send_message","payload":{"conversation_id":1,"content":"deilum random áhugaverðu efni!"}}
+[>] ws_694ecf7deee2c: {"type":"message","payload":{"id":42,"conversation_id":1,"user_id":4,"content":"...
+[<] ws_694ecf7deee2c: {"type":"send_message","payload":{"conversation_id":1,"content":"https://en.wikipedia.org/wiki/Karelian_Group"}}
+[>] ws_694ecf7deee2c: {"type":"message","payload":{"id":43,"conversation_id":1,"user_id":4,"content":"...
+[-] Disconnected: ws_694ecf7deee2c
+[>] ws_694ecf7deee2c: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ed06374089
+[*] Handshake complete: ws_694ed06374089
+[<] ws_694ed06374089: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ed06374089: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ed06374089: {"type":"load_history","payload":{"conversation_id":1,"before":1766772836,"limit":50}}
+[>] ws_694ed06374089: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ed06374089: {"type":"ping","payload":{}}
+[>] ws_694ed06374089: {"type":"pong","payload":[]}
+[<] ws_694ed06374089: {"type":"send_message","payload":{"conversation_id":1,"content":"planið er svo að halda utanum alla linka og sjálfvirkt byggja upp sameiginlegt knowledge base með cool stuffi"}}
+[>] ws_694ed06374089: {"type":"message","payload":{"id":44,"conversation_id":1,"user_id":4,"content":"...
+[<] ws_694ed06374089: {"type":"ping","payload":{}}
+[>] ws_694ed06374089: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ed06374089
+[>] ws_694ed06374089: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694ed0ad98198
+[*] Handshake complete: ws_694ed0ad98198
+[<] ws_694ed0ad98198: {"type":"auth","payload":{"token":"51156eb446a77466bc5f21e8768ef486564f434b20130365f943036aac520e4d"}}
+[>] ws_694ed0ad98198: {"type":"auth_ok","payload":{"user":{"id":4,"nickname":"Lobbi"},"conversations":...
+[<] ws_694ed0ad98198: {"type":"load_history","payload":{"conversation_id":1,"before":1766772909,"limit":50}}
+[>] ws_694ed0ad98198: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"send_message","payload":{"conversation_id":1,"content":"https://en.wikipedia.org/wiki/Turtle_Island"}}
+[>] ws_694ed0ad98198: {"type":"message","payload":{"id":45,"conversation_id":1,"user_id":4,"content":"...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"create_invite","payload":{}}
+[>] ws_694ed0ad98198: {"type":"invite_created","payload":{"code":"QU287Y7H","url":"https:\/\/chat.spja...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"create_invite","payload":{}}
+[>] ws_694ed0ad98198: {"type":"invite_created","payload":{"code":"M6FHH8GV","url":"https:\/\/chat.spja...
+[<] ws_694ed0ad98198: {"type":"create_invite","payload":{}}
+[>] ws_694ed0ad98198: {"type":"invite_created","payload":{"code":"NE6J5MJC","url":"https:\/\/chat.spja...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"create_invite","payload":{}}
+[>] ws_694ed0ad98198: {"type":"invite_created","payload":{"code":"39EZRPHT","url":"https:\/\/chat.spja...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[+] New connection: ws_694ed21e9c2bc
+[*] Handshake complete: ws_694ed21e9c2bc
+[<] ws_694ed21e9c2bc: {"type":"auth","payload":{"token":"7a9d18e0c147efe8e36621461304b3a5f7307698774a67ebf3f33ffcbbf9ba56"}}
+[>] ws_694ed21e9c2bc: {"type":"auth_ok","payload":{"user":{"id":8,"nickname":"Bjartur"},"conversations...
+[>] ws_694ed0ad98198: {"type":"user_online","payload":{"user":{"id":8,"nickname":"Bjartur"}}}
+[<] ws_694ed21e9c2bc: {"type":"load_history","payload":{"conversation_id":1,"before":1766773278,"limit":50}}
+[>] ws_694ed21e9c2bc: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ed0ad98198: {"type":"create_dm","payload":{"user_id":8}}
+[>] ws_694ed0ad98198: {"type":"conversation_created","payload":{"conversation":{"id":6,"type":"dm","me...
+[>] ws_694ed21e9c2bc: {"type":"conversation_created","payload":{"conversation":{"id":6,"type":"dm","me...
+[<] ws_694ed21e9c2bc: {"type":"load_history","payload":{"conversation_id":6,"before":1766773297,"limit":50}}
+[>] ws_694ed21e9c2bc: {"type":"history","payload":{"conversation_id":6,"messages":[],"has_more":false,...
+[<] ws_694ed0ad98198: {"type":"load_history","payload":{"conversation_id":6,"before":1766773297,"limit":50}}
+[>] ws_694ed0ad98198: {"type":"history","payload":{"conversation_id":6,"messages":[],"has_more":false,...
+[<] ws_694ed0ad98198: {"type":"send_message","payload":{"conversation_id":6,"content":"yo"}}
+[>] ws_694ed0ad98198: {"type":"message","payload":{"id":46,"conversation_id":6,"user_id":4,"content":"...
+[>] ws_694ed21e9c2bc: {"type":"message","payload":{"id":46,"conversation_id":6,"user_id":4,"content":"...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed21e9c2bc: {"type":"ping","payload":{}}
+[>] ws_694ed21e9c2bc: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"send_message","payload":{"conversation_id":6,"content":"gerði test user skírðan etir kettinum mínum,    ætti frekar að vera valdegg held ég"}}
+[>] ws_694ed0ad98198: {"type":"message","payload":{"id":47,"conversation_id":6,"user_id":4,"content":"...
+[>] ws_694ed21e9c2bc: {"type":"message","payload":{"id":47,"conversation_id":6,"user_id":4,"content":"...
+[<] ws_694ed21e9c2bc: {"type":"send_message","payload":{"conversation_id":1,"content":"Viljið þið koma á #Hakkavélin á Signal?"}}
+[>] ws_694ed0ad98198: {"type":"message","payload":{"id":48,"conversation_id":1,"user_id":8,"content":"...
+[>] ws_694ed21e9c2bc: {"type":"message","payload":{"id":48,"conversation_id":1,"user_id":8,"content":"...
+[<] ws_694ed0ad98198: {"type":"send_message","payload":{"conversation_id":6,"content":"þetta er í alpha testing svo þú. mátt gjarnan pota aðeins í þetta"}}
+[>] ws_694ed0ad98198: {"type":"message","payload":{"id":49,"conversation_id":6,"user_id":4,"content":"...
+[>] ws_694ed21e9c2bc: {"type":"message","payload":{"id":49,"conversation_id":6,"user_id":4,"content":"...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed21e9c2bc: {"type":"ping","payload":{}}
+[>] ws_694ed21e9c2bc: {"type":"pong","payload":[]}
+[<] ws_694ed21e9c2bc: {"type":"send_message","payload":{"conversation_id":6,"content":"Virkar fínt hingað til"}}
+[>] ws_694ed0ad98198: {"type":"message","payload":{"id":50,"conversation_id":6,"user_id":8,"content":"...
+[>] ws_694ed21e9c2bc: {"type":"message","payload":{"id":50,"conversation_id":6,"user_id":8,"content":"...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed21e9c2bc: {"type":"ping","payload":{}}
+[>] ws_694ed21e9c2bc: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed21e9c2bc: {"type":"ping","payload":{}}
+[>] ws_694ed21e9c2bc: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ed21e9c2bc
+[>] ws_694ed0ad98198: {"type":"user_offline","payload":{"user_id":8}}
+[>] ws_694ed21e9c2bc: {"type":"user_offline","payload":{"user_id":8}}
+[<] ws_694ed0ad98198: {"type":"send_message","payload":{"conversation_id":1,"content":"nei ég nota bara instant messageing sem er vibe coded í php af claude"}}
+[>] ws_694ed0ad98198: {"type":"message","payload":{"id":51,"conversation_id":1,"user_id":4,"content":"...
+[<] ws_694ed0ad98198: {"type":"send_message","payload":{"conversation_id":1,"content":"helst á jólunum"}}
+[>] ws_694ed0ad98198: {"type":"message","payload":{"id":52,"conversation_id":1,"user_id":4,"content":"...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[+] New connection: ws_694ed38398c55
+[*] Handshake complete: ws_694ed38398c55
+[<] ws_694ed38398c55: {"type":"auth","payload":{"token":"7a9d18e0c147efe8e36621461304b3a5f7307698774a67ebf3f33ffcbbf9ba56"}}
+[>] ws_694ed38398c55: {"type":"auth_ok","payload":{"user":{"id":8,"nickname":"Bjartur"},"conversations...
+[>] ws_694ed0ad98198: {"type":"user_online","payload":{"user":{"id":8,"nickname":"Bjartur"}}}
+[<] ws_694ed38398c55: {"type":"load_history","payload":{"conversation_id":1,"before":1766773635,"limit":50}}
+[>] ws_694ed38398c55: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed38398c55: {"type":"ping","payload":{}}
+[>] ws_694ed38398c55: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed38398c55: {"type":"ping","payload":{}}
+[>] ws_694ed38398c55: {"type":"pong","payload":[]}
+[<] ws_694ed38398c55: {"type":"send_message","payload":{"conversation_id":1,"content":"🇮🇸🇮🇸🇮🇸"}}
+[>] ws_694ed0ad98198: {"type":"message","payload":{"id":53,"conversation_id":1,"user_id":8,"content":"...
+[>] ws_694ed38398c55: {"type":"message","payload":{"id":53,"conversation_id":1,"user_id":8,"content":"...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed38398c55: {"type":"ping","payload":{}}
+[>] ws_694ed38398c55: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ed38398c55
+[>] ws_694ed0ad98198: {"type":"user_offline","payload":{"user_id":8}}
+[>] ws_694ed38398c55: {"type":"user_offline","payload":{"user_id":8}}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"send_message","payload":{"conversation_id":1,"content":"já bara íslenzkt spjall takk"}}
+[>] ws_694ed0ad98198: {"type":"message","payload":{"id":54,"conversation_id":1,"user_id":4,"content":"...
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[<] ws_694ed0ad98198: {"type":"ping","payload":{}}
+[>] ws_694ed0ad98198: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694ed0ad98198
+[>] ws_694ed0ad98198: {"type":"user_offline","payload":{"user_id":4}}
+[+] New connection: ws_694edbb49fed6
+[*] Handshake complete: ws_694edbb49fed6
+[<] ws_694edbb49fed6: {"type":"auth","payload":{"token":"3831ee936c213e71416e4f4f8a856fde857b5f7f9609652b6197b882951034d0"}}
+[>] ws_694edbb49fed6: {"type":"auth_ok","payload":{"user":{"id":1,"nickname":"Valdegg"},"conversations...
+[<] ws_694edbb49fed6: {"type":"load_history","payload":{"conversation_id":1,"before":1766775732,"limit":50}}
+[>] ws_694edbb49fed6: {"type":"history","payload":{"conversation_id":1,"messages":[{"id":1,"conversati...
+[<] ws_694edbb49fed6: {"type":"create_dm","payload":{"user_id":7}}
+[>] ws_694edbb49fed6: {"type":"conversation_created","payload":{"conversation":{"id":7,"type":"dm","me...
+[<] ws_694edbb49fed6: {"type":"load_history","payload":{"conversation_id":7,"before":1766775751,"limit":50}}
+[>] ws_694edbb49fed6: {"type":"history","payload":{"conversation_id":7,"messages":[],"has_more":false,...
+[<] ws_694edbb49fed6: {"type":"send_message","payload":{"conversation_id":7,"content":"sup dawg"}}
+[>] ws_694edbb49fed6: {"type":"message","payload":{"id":55,"conversation_id":7,"user_id":1,"content":"...
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"send_message","payload":{"conversation_id":1,"content":"https://www.youtube.com/watch?v=XcsfDxojdV8"}}
+[>] ws_694edbb49fed6: {"type":"message","payload":{"id":56,"conversation_id":1,"user_id":1,"content":"...
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"send_message","payload":{"conversation_id":7,"content":"var að kaupa playmagic.now"}}
+[>] ws_694edbb49fed6: {"type":"message","payload":{"id":57,"conversation_id":7,"user_id":1,"content":"...
+[<] ws_694edbb49fed6: {"type":"send_message","payload":{"conversation_id":7,"content":"til að setja magic clientinn á"}}
+[>] ws_694edbb49fed6: {"type":"message","payload":{"id":58,"conversation_id":7,"user_id":1,"content":"...
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[<] ws_694edbb49fed6: {"type":"ping","payload":{}}
+[>] ws_694edbb49fed6: {"type":"pong","payload":[]}
+[-] Disconnected: ws_694edbb49fed6
+[>] ws_694edbb49fed6: {"type":"user_offline","payload":{"user_id":1}}
+[+] New connection: ws_694ee59542e64
+[*] Handshake complete: ws_694ee59542e64
+[<] ws_694ee59542e64: {"type":"auth","payload":{"token":"3831ee936c213e71416e4f4f8a856fde857b5f7f9609652b6197b882951034d0"}}
+[>] ws_694ee59542e64: {"type":"auth_ok","payload":{"user":{"id":1,"nickname":"Valdegg"},"conversations...
+[<] ws_694ee59542e64: {"type":"load_history","payload":{"conversation_id":7,"before":1766775753,"limit":50}}
+[>] ws_694ee59542e64: {"type":"history","payload":{"conversation_id":7,"messages":[],"has_more":false,...
+[<] ws_694ee59542e64: {"type":"ping","payload":{}}
+[>] ws_694ee59542e64: {"type":"pong","payload":[]}
+[<] ws_694ee59542e64: {"type":"ping","payload":{}}
+[>] ws_694ee59542e64: {"type":"pong","payload":[]}
+[<] ws_694ee59542e64: {"type":"ping","payload":{}}
+[>] ws_694ee59542e64: {"type":"pong","payload":[]}
+[<] ws_694ee59542e64: {"type":"ping","payload":{}}
+[>] ws_694ee59542e64: {"type":"pong","payload":[]}
+[<] ws_694ee59542e64: {"type":"ping","payload":{}}
+[>] ws_694ee59542e64: {"type":"pong","payload":[]}

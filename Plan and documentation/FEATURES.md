@@ -33,9 +33,13 @@ Legend: ✅ = Implemented | 🔲 = Not yet
 ## Messaging
 	•	✅ Real-time message delivery using WebSockets.
 	•	✅ Messages are plain text.
+	•	✅ URLs in messages are automatically detected and made clickable.
 	•	✅ Message history is persisted server-side.
 	•	✅ Message history is available on reload or reconnect.
 	•	✅ Messages are immutable once sent.
+	•	✅ System messages for user online/offline events.
+	•	✅ Visual grouping of consecutive messages from the same user.
+	•	✅ Time dividers for long pauses between messages.
 
 ---
 
@@ -73,8 +77,24 @@ Legend: ✅ = Implemented | 🔲 = Not yet
 | Identity & Access | ✅ 5/5 complete |
 | Invitation System | ✅ 3/3 complete |
 | Conversation Model | ✅ 5/5 complete |
-| Messaging | ✅ 5/5 complete |
+| Messaging | ✅ 9/9 complete |
 | Presence | ✅ 3/3 complete |
 | Navigation | ✅ 2/2 complete |
 
 **All features implemented! ✅**
+
+---
+
+## UI Enhancements (Beyond Core Features)
+
+Additional improvements made to enhance user experience:
+	•	✅ Visual hierarchy improvements (timestamp, nickname, message text styling)
+	•	✅ Subtle background texture to reduce "empty void" feeling
+	•	✅ Improved line rhythm and typography (warmer monospaced fonts)
+	•	✅ Hearth-themed input area with warm glow effects
+	•	✅ Logo integration with circular frame and vignette
+	•	✅ Sidebar optimized as a "ledger" (reduced visual noise, tighter spacing)
+	•	✅ Message grouping for better readability (consecutive messages from same user)
+	•	✅ Clickable links in messages (automatic URL detection)
+	•	✅ Current user displayed at top of online list with distinct indicator
+	•	✅ Group chat member display (full names if ≤4, abbreviated if >4)

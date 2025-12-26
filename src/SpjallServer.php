@@ -176,6 +176,17 @@ class SpjallServer
         // Get online users
         $onlineUsers = $this->presence->getOnlineUsers();
 
+        // Get all users (for offline list)
+        $allUsers = UserService::getAll();
+        
+        // Format users for frontend (ensure id is int)
+        $formattedUsers = array_map(function($u) {
+            return [
+                'id' => (int) $u['id'],
+                'nickname' => $u['nickname']
+            ];
+        }, $allUsers);
+
         // Send auth success
         $conn->sendEvent('auth_ok', [
             'user' => [
@@ -183,7 +194,8 @@ class SpjallServer
                 'nickname' => $user['nickname']
             ],
             'conversations' => $conversations,
-            'online_users' => $onlineUsers
+            'online_users' => $onlineUsers,
+            'all_users' => $formattedUsers
         ]);
 
         // Broadcast user_online if they just came online
@@ -234,13 +246,20 @@ class SpjallServer
         );
         $messageId = Database::lastInsertId();
 
+        // Get user info for the message
+        $user = UserService::getById($userId);
+        
         // Build message object
         $message = [
             'id' => $messageId,
             'conversation_id' => $conversationId,
             'user_id' => $userId,
             'content' => $content,
-            'created_at' => $now
+            'created_at' => $now,
+            'user' => $user ? [
+                'id' => (int) $user['id'],
+                'nickname' => $user['nickname']
+            ] : null
         ];
 
         // Broadcast to conversation participants
@@ -421,19 +440,38 @@ class SpjallServer
         // Reverse to chronological order
         $messages = array_reverse($messages);
 
-        // Convert types
-        $messages = array_map(fn($m) => [
-            'id' => (int) $m['id'],
-            'conversation_id' => (int) $m['conversation_id'],
-            'user_id' => (int) $m['user_id'],
-            'content' => $m['content'],
-            'created_at' => (int) $m['created_at']
-        ], $messages);
+        // Get unique user IDs from messages
+        $userIds = array_unique(array_column($messages, 'user_id'));
+        
+        // Fetch user info for all message senders
+        $users = [];
+        foreach ($userIds as $uid) {
+            $user = UserService::getById((int) $uid);
+            if ($user) {
+                $users[$uid] = [
+                    'id' => (int) $user['id'],
+                    'nickname' => $user['nickname']
+                ];
+            }
+        }
+
+        // Convert types and include user info
+        $messages = array_map(function($m) use ($users) {
+            return [
+                'id' => (int) $m['id'],
+                'conversation_id' => (int) $m['conversation_id'],
+                'user_id' => (int) $m['user_id'],
+                'content' => $m['content'],
+                'created_at' => (int) $m['created_at'],
+                'user' => $users[$m['user_id']] ?? null
+            ];
+        }, $messages);
 
         $conn->sendEvent('history', [
             'conversation_id' => $conversationId,
             'messages' => $messages,
-            'has_more' => $hasMore
+            'has_more' => $hasMore,
+            'users' => array_values($users) // Include all users for easy lookup
         ]);
     }
 

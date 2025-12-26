@@ -1,178 +1,610 @@
-[Thu Dec 25 18:25:46 2025] PHP 8.5.1 Development Server (http://0.0.0.0:8080) started
-[Thu Dec 25 18:26:01 2025] 127.0.0.1:52607 Accepted
-[Thu Dec 25 18:26:01 2025] 127.0.0.1:52607 [200]: GET /
-[Thu Dec 25 18:26:01 2025] 127.0.0.1:52607 Closing
-[Thu Dec 25 18:26:01 2025] 127.0.0.1:52608 Accepted
-[Thu Dec 25 18:26:01 2025] 127.0.0.1:52609 Accepted
-[Thu Dec 25 18:26:01 2025] 127.0.0.1:52608 [200]: GET /css/style.css
-[Thu Dec 25 18:26:01 2025] 127.0.0.1:52608 Closing
-[Thu Dec 25 18:26:01 2025] 127.0.0.1:52609 [200]: GET /js/app.js
-[Thu Dec 25 18:26:01 2025] 127.0.0.1:52609 Closing
-[Thu Dec 25 18:26:06 2025] 127.0.0.1:52612 Accepted
-[Thu Dec 25 18:26:06 2025] 127.0.0.1:52612 [200]: GET /login
-[Thu Dec 25 18:26:06 2025] 127.0.0.1:52612 Closing
-[Thu Dec 25 18:26:06 2025] 127.0.0.1:52613 Accepted
-[Thu Dec 25 18:26:06 2025] 127.0.0.1:52613 [404]: GET /favicon.ico
-[Thu Dec 25 18:26:06 2025] 127.0.0.1:52613 Closing
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52617 Accepted
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52617 [200]: POST /login
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52617 Closing
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52618 Accepted
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52618 [200]: GET /
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52618 Closing
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52619 Accepted
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52620 Accepted
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52619 [200]: GET /css/style.css
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52620 [200]: GET /js/app.js
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52619 Closing
-[Thu Dec 25 18:26:10 2025] 127.0.0.1:52620 Closing
-[Thu Dec 25 18:26:22 2025] 127.0.0.1:52628 Accepted
-[Thu Dec 25 18:26:22 2025] 127.0.0.1:52628 [404]: GET /robots.txt
-[Thu Dec 25 18:26:22 2025] 127.0.0.1:52628 Closing
-[Thu Dec 25 18:26:23 2025] 127.0.0.1:52629 Accepted
-[Thu Dec 25 18:26:23 2025] 127.0.0.1:52629 [200]: GET /join/Z6G8EN9U
-[Thu Dec 25 18:26:23 2025] 127.0.0.1:52629 Closing
-[Thu Dec 25 18:26:25 2025] 127.0.0.1:52636 Accepted
-[Thu Dec 25 18:26:25 2025] 127.0.0.1:52636 [200]: GET /join/Z6G8EN9U?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEeH4RuwiTd8bL5JO5PRz6DFOOYxeVmjuHnMIlG4JOHlaWqMujVZ3Kl1O3zB6o_aem_e_Y3d82xSFL1GVe8wdrkdw
-[Thu Dec 25 18:26:25 2025] 127.0.0.1:52636 Closing
-[Thu Dec 25 18:26:25 2025] 127.0.0.1:52637 Accepted
-[Thu Dec 25 18:26:25 2025] 127.0.0.1:52637 [404]: GET /favicon.ico
-[Thu Dec 25 18:26:25 2025] 127.0.0.1:52637 Closing
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52638 Accepted
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52638 [404]: HEAD /.env
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52638 Closing
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52639 Accepted
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52639 [404]: HEAD /.env.local
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52639 Closing
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52640 Accepted
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52640 [404]: HEAD /.env.prod
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52640 Closing
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52641 Accepted
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52641 [404]: HEAD /.env.dev
-[Thu Dec 25 18:26:26 2025] 127.0.0.1:52641 Closing
-[Thu Dec 25 18:26:28 2025] 127.0.0.1:52644 Accepted
-[Thu Dec 25 18:26:28 2025] 127.0.0.1:52644 [200]: HEAD /
-[Thu Dec 25 18:26:28 2025] 127.0.0.1:52644 Closing
-[Thu Dec 25 18:26:29 2025] 127.0.0.1:52645 Accepted
-[Thu Dec 25 18:26:29 2025] 127.0.0.1:52645 [200]: GET /
-[Thu Dec 25 18:26:29 2025] 127.0.0.1:52645 Closing
-[Thu Dec 25 18:26:29 2025] 127.0.0.1:52646 Accepted
-[Thu Dec 25 18:26:29 2025] 127.0.0.1:52646 [404]: HEAD /_next
-[Thu Dec 25 18:26:29 2025] 127.0.0.1:52646 Closing
-[Thu Dec 25 18:26:30 2025] 127.0.0.1:52647 Accepted
-[Thu Dec 25 18:26:30 2025] 127.0.0.1:52647 [200]: POST /
-[Thu Dec 25 18:26:30 2025] 127.0.0.1:52647 Closing
-[Thu Dec 25 18:26:30 2025] 127.0.0.1:52648 Accepted
-[Thu Dec 25 18:26:30 2025] 127.0.0.1:52648 [404]: POST /_next
-[Thu Dec 25 18:26:30 2025] 127.0.0.1:52648 Closing
-[Thu Dec 25 18:26:31 2025] 127.0.0.1:52649 Accepted
-[Thu Dec 25 18:26:31 2025] 127.0.0.1:52649 [404]: HEAD /.env
-[Thu Dec 25 18:26:31 2025] 127.0.0.1:52649 Closing
-[Thu Dec 25 18:26:31 2025] 127.0.0.1:52650 Accepted
-[Thu Dec 25 18:26:31 2025] 127.0.0.1:52650 [404]: HEAD /.env.local
-[Thu Dec 25 18:26:31 2025] 127.0.0.1:52650 Closing
-[Thu Dec 25 18:26:31 2025] 127.0.0.1:52651 Accepted
-[Thu Dec 25 18:26:31 2025] 127.0.0.1:52651 [404]: HEAD /.env.prod
-[Thu Dec 25 18:26:31 2025] 127.0.0.1:52651 Closing
-[Thu Dec 25 18:26:32 2025] 127.0.0.1:52653 Accepted
-[Thu Dec 25 18:26:32 2025] 127.0.0.1:52653 [404]: HEAD /.env.dev
-[Thu Dec 25 18:26:32 2025] 127.0.0.1:52653 Closing
-[Thu Dec 25 18:26:37 2025] 127.0.0.1:52656 Accepted
-[Thu Dec 25 18:26:37 2025] 127.0.0.1:52656 [200]: GET /join/6S9UD2BW
-[Thu Dec 25 18:26:37 2025] 127.0.0.1:52656 Closing
-[Thu Dec 25 18:26:39 2025] 127.0.0.1:52661 Accepted
-[Thu Dec 25 18:26:39 2025] 127.0.0.1:52661 [200]: GET /join/6S9UD2BW?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEeFPXPy-NQQSuu4ynkiKuZCWnp0UlohMNgkLKj7EMOyzKTkBQnF-hA496eQJo_aem_y0UTLjIuepGxE7n99lhOGg
-[Thu Dec 25 18:26:39 2025] 127.0.0.1:52661 Closing
-[Thu Dec 25 18:26:39 2025] 127.0.0.1:52663 Accepted
-[Thu Dec 25 18:26:39 2025] 127.0.0.1:52663 [404]: GET /favicon.ico
-[Thu Dec 25 18:26:39 2025] 127.0.0.1:52663 Closing
-[Thu Dec 25 18:26:56 2025] 127.0.0.1:52666 Accepted
-[Thu Dec 25 18:26:56 2025] 127.0.0.1:52666 [200]: HEAD /
-[Thu Dec 25 18:26:56 2025] 127.0.0.1:52666 Closing
-[Thu Dec 25 18:26:56 2025] 127.0.0.1:52667 Accepted
-[Thu Dec 25 18:26:56 2025] 127.0.0.1:52667 [200]: GET /
-[Thu Dec 25 18:26:56 2025] 127.0.0.1:52667 Closing
-[Thu Dec 25 18:26:57 2025] 127.0.0.1:52668 Accepted
-[Thu Dec 25 18:26:57 2025] 127.0.0.1:52668 [404]: HEAD /_next
-[Thu Dec 25 18:26:57 2025] 127.0.0.1:52668 Closing
-[Thu Dec 25 18:26:59 2025] 127.0.0.1:52669 Accepted
-[Thu Dec 25 18:26:59 2025] 127.0.0.1:52669 [200]: GET /join/Z6G8EN9U
-[Thu Dec 25 18:26:59 2025] 127.0.0.1:52669 Closing
-[Thu Dec 25 18:27:05 2025] 127.0.0.1:52674 Accepted
-[Thu Dec 25 18:27:05 2025] 127.0.0.1:52674 [200]: GET /join/6S9UD2BW?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEeFPXPy-NQQSuu4ynkiKuZCWnp0UlohMNgkLKj7EMOyzKTkBQnF-hA496eQJo_aem_y0UTLjIuepGxE7n99lhOGg
-[Thu Dec 25 18:27:05 2025] 127.0.0.1:52674 Closing
-[Thu Dec 25 18:27:13 2025] 127.0.0.1:52676 Accepted
-[Thu Dec 25 18:27:13 2025] 127.0.0.1:52676 [200]: GET /join/6S9UD2BW
-[Thu Dec 25 18:27:13 2025] 127.0.0.1:52676 Closing
-[Thu Dec 25 18:27:30 2025] 127.0.0.1:52702 Accepted
-[Thu Dec 25 18:27:30 2025] 127.0.0.1:52702 [200]: GET /join/XSNXF99L
-[Thu Dec 25 18:27:30 2025] 127.0.0.1:52702 Closing
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52703 Accepted
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52703 [404]: HEAD /.env
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52703 Closing
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52704 Accepted
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52704 [404]: HEAD /.env.local
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52704 Closing
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52705 Accepted
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52705 [404]: HEAD /.env.prod
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52705 Closing
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52706 Accepted
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52706 [404]: HEAD /.env.dev
-[Thu Dec 25 18:27:31 2025] 127.0.0.1:52706 Closing
-[Thu Dec 25 18:27:34 2025] 127.0.0.1:52709 Accepted
-[Thu Dec 25 18:27:34 2025] 127.0.0.1:52709 [200]: HEAD /
-[Thu Dec 25 18:27:34 2025] 127.0.0.1:52709 Closing
-[Thu Dec 25 18:27:35 2025] 127.0.0.1:52710 Accepted
-[Thu Dec 25 18:27:35 2025] 127.0.0.1:52710 [200]: GET /
-[Thu Dec 25 18:27:35 2025] 127.0.0.1:52710 Closing
-[Thu Dec 25 18:27:36 2025] 127.0.0.1:52711 Accepted
-[Thu Dec 25 18:27:36 2025] 127.0.0.1:52711 [404]: HEAD /_next
-[Thu Dec 25 18:27:36 2025] 127.0.0.1:52711 Closing
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52727 Accepted
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52727 [200]: GET /
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52727 Closing
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52728 Accepted
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52728 [200]: GET /css/style.css
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52728 Closing
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52729 Accepted
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52729 [200]: GET /js/app.js
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52729 Closing
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52731 Accepted
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52731 [404]: GET /favicon.ico
-[Thu Dec 25 18:27:55 2025] 127.0.0.1:52731 Closing
-[Thu Dec 25 18:28:04 2025] 127.0.0.1:52736 Accepted
-[Thu Dec 25 18:28:04 2025] 127.0.0.1:52736 [200]: GET /join/YRCT6796
-[Thu Dec 25 18:28:04 2025] 127.0.0.1:52736 Closing
-[Thu Dec 25 18:28:07 2025] 127.0.0.1:52741 Accepted
-[Thu Dec 25 18:28:07 2025] 127.0.0.1:52741 [200]: GET /join/YRCT6796?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEeui5mdZztvac9ve6KNApDG0YW9kj7DcKWbEatcfm1tYNAmjbsVgwMsWGdxR4_aem_muxuSgbjNKXjauQaSkhYaA
-[Thu Dec 25 18:28:07 2025] 127.0.0.1:52741 Closing
-[Thu Dec 25 18:28:07 2025] 127.0.0.1:52742 Accepted
-[Thu Dec 25 18:28:07 2025] 127.0.0.1:52743 Accepted
-[Thu Dec 25 18:28:07 2025] 127.0.0.1:52742 [404]: GET /favicon.ico
-[Thu Dec 25 18:28:07 2025] 127.0.0.1:52742 Closing
-[Thu Dec 25 18:28:07 2025] 127.0.0.1:52743 [200]: GET /
-[Thu Dec 25 18:28:07 2025] 127.0.0.1:52743 Closing
-[Thu Dec 25 18:28:08 2025] 127.0.0.1:52744 Accepted
-[Thu Dec 25 18:28:08 2025] 127.0.0.1:52745 Accepted
-[Thu Dec 25 18:28:08 2025] 127.0.0.1:52744 [200]: GET /js/app.js
-[Thu Dec 25 18:28:08 2025] 127.0.0.1:52745 [200]: GET /css/style.css
-[Thu Dec 25 18:28:08 2025] 127.0.0.1:52744 Closing
-[Thu Dec 25 18:28:08 2025] 127.0.0.1:52745 Closing
-[Thu Dec 25 18:28:08 2025] 127.0.0.1:52747 Accepted
-[Thu Dec 25 18:28:08 2025] 127.0.0.1:52747 [404]: GET /favicon.ico
-[Thu Dec 25 18:28:08 2025] 127.0.0.1:52747 Closing
-[Thu Dec 25 18:28:12 2025] 127.0.0.1:52748 Accepted
-[Thu Dec 25 18:28:12 2025] 127.0.0.1:52748 [200]: GET /
-[Thu Dec 25 18:28:12 2025] 127.0.0.1:52748 Closing
-[Thu Dec 25 18:28:13 2025] 127.0.0.1:52749 Accepted
-[Thu Dec 25 18:28:13 2025] 127.0.0.1:52749 [200]: GET /css/style.css
-[Thu Dec 25 18:28:13 2025] 127.0.0.1:52750 Accepted
-[Thu Dec 25 18:28:13 2025] 127.0.0.1:52749 Closing
-[Thu Dec 25 18:28:13 2025] 127.0.0.1:52750 [200]: GET /js/app.js
-[Thu Dec 25 18:28:13 2025] 127.0.0.1:52750 Closing
-[Thu Dec 25 18:28:13 2025] 127.0.0.1:52751 Accepted
-[Thu Dec 25 18:28:13 2025] 127.0.0.1:52751 [404]: GET /favicon.ico
-[Thu Dec 25 18:28:13 2025] 127.0.0.1:52751 Closing
-[Thu Dec 25 18:28:41 2025] 127.0.0.1:52759 Accepted
-[Thu Dec 25 18:28:41 2025] 127.0.0.1:52759 [200]: GET /join/YRCT6796
-[Thu Dec 25 18:28:41 2025] 127.0.0.1:52759 Closing
+[Fri Dec 26 18:23:10 2025] PHP 8.5.1 Development Server (http://0.0.0.0:8080) started
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63227 Accepted
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63227 [200]: GET /
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63227 Closing
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63228 Accepted
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63229 Accepted
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63228 [200]: GET /css/style.css
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63229 [200]: GET /logo.jpg
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63228 Closing
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63229 Closing
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63230 Accepted
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63230 [200]: GET /js/app.js
+[Fri Dec 26 18:23:34 2025] 127.0.0.1:63230 Closing
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63599 Accepted
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63599 [200]: GET /
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63599 Closing
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63600 Accepted
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63601 Accepted
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63602 Accepted
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63602 [200]: GET /logo.jpg
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63601 [200]: GET /js/app.js
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63600 [200]: GET /css/style.css
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63602 Closing
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63601 Closing
+[Fri Dec 26 18:27:38 2025] 127.0.0.1:63600 Closing
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63700 Accepted
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63700 [200]: GET /
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63700 Closing
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63701 Accepted
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63701 [200]: GET /css/style.css
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63701 Closing
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63703 Accepted
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63702 Accepted
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63703 [200]: GET /logo.jpg
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63702 [200]: GET /js/app.js
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63703 Closing
+[Fri Dec 26 18:27:52 2025] 127.0.0.1:63702 Closing
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63795 Accepted
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63795 [200]: GET /
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63795 Closing
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63796 Accepted
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63796 [200]: GET /css/style.css
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63796 Closing
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63797 Accepted
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63798 Accepted
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63797 [200]: GET /logo.jpg
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63798 [200]: GET /js/app.js
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63797 Closing
+[Fri Dec 26 18:30:06 2025] 127.0.0.1:63798 Closing
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63877 Accepted
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63877 [200]: GET /
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63877 Closing
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63878 Accepted
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63878 [200]: GET /css/style.css
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63878 Closing
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63879 Accepted
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63880 Accepted
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63879 [200]: GET /logo.jpg
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63880 [200]: GET /js/app.js
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63879 Closing
+[Fri Dec 26 18:31:42 2025] 127.0.0.1:63880 Closing
+[Fri Dec 26 18:32:36 2025] 127.0.0.1:63898 Accepted
+[Fri Dec 26 18:32:36 2025] 127.0.0.1:63898 [200]: GET /
+[Fri Dec 26 18:32:36 2025] 127.0.0.1:63898 Closing
+[Fri Dec 26 18:32:37 2025] 127.0.0.1:63899 Accepted
+[Fri Dec 26 18:32:37 2025] 127.0.0.1:63899 [200]: GET /css/style.css
+[Fri Dec 26 18:32:37 2025] 127.0.0.1:63899 Closing
+[Fri Dec 26 18:32:37 2025] 127.0.0.1:63900 Accepted
+[Fri Dec 26 18:32:37 2025] 127.0.0.1:63901 Accepted
+[Fri Dec 26 18:32:37 2025] 127.0.0.1:63900 [200]: GET /js/app.js
+[Fri Dec 26 18:32:37 2025] 127.0.0.1:63901 [200]: GET /logo.jpg
+[Fri Dec 26 18:32:37 2025] 127.0.0.1:63900 Closing
+[Fri Dec 26 18:32:37 2025] 127.0.0.1:63901 Closing
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63982 Accepted
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63982 [200]: GET /
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63982 Closing
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63983 Accepted
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63984 Accepted
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63984 [200]: GET /logo.jpg
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63983 [200]: GET /css/style.css
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63984 Closing
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63983 Closing
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63985 Accepted
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63985 [200]: GET /js/app.js
+[Fri Dec 26 18:35:11 2025] 127.0.0.1:63985 Closing
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64094 Accepted
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64094 [200]: GET /
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64094 Closing
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64099 Accepted
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64099 [200]: GET /css/style.css
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64099 Closing
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64101 Accepted
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64100 Accepted
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64101 [200]: GET /js/app.js
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64100 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64101 Closing
+[Fri Dec 26 18:37:46 2025] 127.0.0.1:64100 Closing
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64162 Accepted
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64162 [200]: GET /
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64162 Closing
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64163 Accepted
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64163 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64164 Accepted
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64165 Accepted
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64164 [200]: GET /js/app.js
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64165 [200]: GET /css/style.css
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64164 Closing
+[Fri Dec 26 18:39:21 2025] 127.0.0.1:64165 Closing
+[Fri Dec 26 18:39:22 2025] 127.0.0.1:64163 Closing
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64254 Accepted
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64254 [200]: GET /
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64254 Closing
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64256 Accepted
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64255 Accepted
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64256 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64257 Accepted
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64255 [200]: GET /css/style.css
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64257 [200]: GET /js/app.js
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64255 Closing
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64257 Closing
+[Fri Dec 26 18:41:53 2025] 127.0.0.1:64256 Closing
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64289 Accepted
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64289 [200]: GET /
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64289 Closing
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64290 Accepted
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64290 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64290 Closing
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64291 Accepted
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64292 Accepted
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64291 [200]: GET /css/style.css
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64292 [200]: GET /js/app.js
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64291 Closing
+[Fri Dec 26 18:42:35 2025] 127.0.0.1:64292 Closing
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64343 Accepted
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64343 [200]: GET /
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64343 Closing
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64344 Accepted
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64345 Accepted
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64346 Accepted
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64345 [200]: GET /js/app.js
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64344 [200]: GET /css/style.css
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64346 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64345 Closing
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64344 Closing
+[Fri Dec 26 18:43:42 2025] 127.0.0.1:64346 Closing
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64386 Accepted
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64386 [200]: GET /
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64386 Closing
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64387 Accepted
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64388 Accepted
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64387 [200]: GET /css/style.css
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64388 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64387 Closing
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64389 Accepted
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64389 [200]: GET /js/app.js
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64389 Closing
+[Fri Dec 26 18:44:33 2025] 127.0.0.1:64388 Closing
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64433 Accepted
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64433 [200]: GET /
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64433 Closing
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64435 Accepted
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64434 Accepted
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64436 Accepted
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64434 [200]: GET /js/app.js
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64436 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64435 [200]: GET /css/style.css
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64434 Closing
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64435 Closing
+[Fri Dec 26 18:45:57 2025] 127.0.0.1:64436 Closing
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64578 Accepted
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64578 [200]: GET /
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64578 Closing
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64579 Accepted
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64580 Accepted
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64579 [200]: GET /js/app.js
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64581 Accepted
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64580 [200]: GET /css/style.css
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64581 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64579 Closing
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64580 Closing
+[Fri Dec 26 18:49:54 2025] 127.0.0.1:64581 Closing
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64640 Accepted
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64640 [200]: GET /
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64640 Closing
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64641 Accepted
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64643 Accepted
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64642 Accepted
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64641 [200]: GET /css/style.css
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64643 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64642 [200]: GET /js/app.js
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64641 Closing
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64642 Closing
+[Fri Dec 26 18:51:23 2025] 127.0.0.1:64643 Closing
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64742 Accepted
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64742 [200]: GET /
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64742 Closing
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64744 Accepted
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64745 Accepted
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64743 Accepted
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64745 [200]: GET /js/app.js
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64744 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64743 [200]: GET /css/style.css
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64745 Closing
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64743 Closing
+[Fri Dec 26 18:53:33 2025] 127.0.0.1:64744 Closing
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64807 Accepted
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64807 [200]: GET /
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64807 Closing
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64808 Accepted
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64809 Accepted
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64808 [200]: GET /css/style.css
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64809 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64808 Closing
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64810 Accepted
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64810 [200]: GET /js/app.js
+[Fri Dec 26 18:55:13 2025] 127.0.0.1:64810 Closing
+[Fri Dec 26 18:55:14 2025] 127.0.0.1:64809 Closing
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64884 Accepted
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64884 [200]: GET /
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64884 Closing
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64885 Accepted
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64885 [200]: GET /css/style.css
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64885 Closing
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64886 Accepted
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64886 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64886 Closing
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64887 Accepted
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64887 [200]: GET /js/app.js
+[Fri Dec 26 18:56:15 2025] 127.0.0.1:64887 Closing
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64986 Accepted
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64986 [200]: GET /
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64986 Closing
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64987 Accepted
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64987 [200]: GET /css/style.css
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64987 Closing
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64989 Accepted
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64989 [404]: GET /js/lkk_ch.js - No such file or directory
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64989 Closing
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64990 Accepted
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64990 [404]: GET /css/support_parent.css - No such file or directory
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64990 Closing
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64991 Accepted
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64991 [404]: GET /js/twint_ch.js - No such file or directory
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64991 Closing
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64992 Accepted
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64992 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64992 Closing
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64993 Accepted
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64993 [200]: GET /js/app.js
+[Fri Dec 26 18:58:07 2025] 127.0.0.1:64993 Closing
+[Fri Dec 26 18:58:13 2025] 127.0.0.1:64998 Accepted
+[Fri Dec 26 18:58:13 2025] 127.0.0.1:64998 [200]: GET /
+[Fri Dec 26 18:58:13 2025] 127.0.0.1:64998 Closing
+[Fri Dec 26 18:58:14 2025] 127.0.0.1:65000 Accepted
+[Fri Dec 26 18:58:14 2025] 127.0.0.1:65001 Accepted
+[Fri Dec 26 18:58:14 2025] 127.0.0.1:64999 Accepted
+[Fri Dec 26 18:58:14 2025] 127.0.0.1:65000 [200]: GET /css/style.css
+[Fri Dec 26 18:58:14 2025] 127.0.0.1:65001 [200]: GET /js/app.js
+[Fri Dec 26 18:58:14 2025] 127.0.0.1:64999 [200]: GET /logo_grey.jpg
+[Fri Dec 26 18:58:14 2025] 127.0.0.1:65000 Closing
+[Fri Dec 26 18:58:14 2025] 127.0.0.1:65001 Closing
+[Fri Dec 26 18:58:14 2025] 127.0.0.1:64999 Closing
+[Fri Dec 26 19:00:50 2025] 127.0.0.1:65143 Accepted
+[Fri Dec 26 19:00:50 2025] 127.0.0.1:65143 [200]: GET /
+[Fri Dec 26 19:00:50 2025] 127.0.0.1:65143 Closing
+[Fri Dec 26 19:00:51 2025] 127.0.0.1:65148 Accepted
+[Fri Dec 26 19:00:51 2025] 127.0.0.1:65146 Accepted
+[Fri Dec 26 19:00:51 2025] 127.0.0.1:65147 Accepted
+[Fri Dec 26 19:00:51 2025] 127.0.0.1:65148 [200]: GET /js/app.js
+[Fri Dec 26 19:00:51 2025] 127.0.0.1:65147 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:00:51 2025] 127.0.0.1:65146 [200]: GET /css/style.css
+[Fri Dec 26 19:00:51 2025] 127.0.0.1:65148 Closing
+[Fri Dec 26 19:00:51 2025] 127.0.0.1:65146 Closing
+[Fri Dec 26 19:00:53 2025] 127.0.0.1:65147 Closing
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65180 Accepted
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65180 [200]: GET /
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65180 Closing
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65182 Accepted
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65181 Accepted
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65183 Accepted
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65182 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65183 [200]: GET /css/style.css
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65181 [200]: GET /js/app.js
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65183 Closing
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65181 Closing
+[Fri Dec 26 19:01:04 2025] 127.0.0.1:65182 Closing
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65218 Accepted
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65218 [200]: GET /
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65218 Closing
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65219 Accepted
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65219 [200]: GET /css/style.css
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65219 Closing
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65221 Accepted
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65220 Accepted
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65221 [200]: GET /logo.jpg
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65220 [200]: GET /js/app.js
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65221 Closing
+[Fri Dec 26 19:01:16 2025] 127.0.0.1:65220 Closing
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65231 Accepted
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65231 [200]: GET /
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65231 Closing
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65232 Accepted
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65233 Accepted
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65232 [200]: GET /js/app.js
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65234 Accepted
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65233 [200]: GET /logo.jpg
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65234 [200]: GET /css/style.css
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65232 Closing
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65233 Closing
+[Fri Dec 26 19:01:36 2025] 127.0.0.1:65234 Closing
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65288 Accepted
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65288 [200]: GET /
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65288 Closing
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65289 Accepted
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65289 [200]: GET /css/style.css
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65289 Closing
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65290 Accepted
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65291 Accepted
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65290 [200]: GET /js/app.js
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65291 [200]: GET /logo.jpg
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65290 Closing
+[Fri Dec 26 19:02:30 2025] 127.0.0.1:65291 Closing
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65342 Accepted
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65342 [200]: GET /
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65342 Closing
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65343 Accepted
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65344 Accepted
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65343 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65344 [200]: GET /css/style.css
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65345 Accepted
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65345 [200]: GET /js/app.js
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65344 Closing
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65345 Closing
+[Fri Dec 26 19:03:31 2025] 127.0.0.1:65343 Closing
+[Fri Dec 26 19:04:02 2025] 127.0.0.1:65380 Accepted
+[Fri Dec 26 19:04:02 2025] 127.0.0.1:65380 [200]: GET /
+[Fri Dec 26 19:04:02 2025] 127.0.0.1:65380 Closing
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65382 Accepted
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65382 [200]: GET /
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65382 Closing
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65383 Accepted
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65384 Accepted
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65383 [200]: GET /css/style.css
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65383 Closing
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65384 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65385 Accepted
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65385 [200]: GET /js/app.js
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65385 Closing
+[Fri Dec 26 19:04:06 2025] 127.0.0.1:65384 Closing
+[Fri Dec 26 19:04:13 2025] 127.0.0.1:65391 Accepted
+[Fri Dec 26 19:04:13 2025] 127.0.0.1:65391 [200]: GET /
+[Fri Dec 26 19:04:13 2025] 127.0.0.1:65391 Closing
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65428 Accepted
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65428 [200]: GET /
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65428 Closing
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65429 Accepted
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65429 [200]: GET /css/style.css
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65429 Closing
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65430 Accepted
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65431 Accepted
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65430 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65431 [200]: GET /js/app.js
+[Fri Dec 26 19:05:02 2025] 127.0.0.1:65431 Closing
+[Fri Dec 26 19:05:03 2025] 127.0.0.1:65430 Closing
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65489 Accepted
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65489 [200]: GET /
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65489 Closing
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65491 Accepted
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65490 Accepted
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65492 Accepted
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65491 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65490 [200]: GET /css/style.css
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65492 [200]: GET /js/app.js
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65490 Closing
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65492 Closing
+[Fri Dec 26 19:06:29 2025] 127.0.0.1:65491 Closing
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49153 Accepted
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49153 [200]: GET /
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49153 Closing
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49154 Accepted
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49154 [200]: GET /css/style.css
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49154 Closing
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49155 Accepted
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49156 Accepted
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49156 [200]: GET /js/app.js
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49155 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49156 Closing
+[Fri Dec 26 19:07:33 2025] 127.0.0.1:49155 Closing
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49212 Accepted
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49212 [200]: GET /
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49212 Closing
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49213 Accepted
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49213 [200]: GET /css/style.css
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49213 Closing
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49214 Accepted
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49214 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49215 Accepted
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49215 [200]: GET /js/app.js
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49215 Closing
+[Fri Dec 26 19:08:51 2025] 127.0.0.1:49214 Closing
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49298 Accepted
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49298 [200]: GET /
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49298 Closing
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49299 Accepted
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49299 [200]: GET /css/style.css
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49300 Accepted
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49301 Accepted
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49299 Closing
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49301 [200]: GET /js/app.js
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49301 Closing
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49300 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:10:05 2025] 127.0.0.1:49300 Closing
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49448 Accepted
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49448 [200]: GET /
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49448 Closing
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49449 Accepted
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49450 Accepted
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49449 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49450 [200]: GET /css/style.css
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49450 Closing
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49451 Accepted
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49451 [200]: GET /js/app.js
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49451 Closing
+[Fri Dec 26 19:13:54 2025] 127.0.0.1:49449 Closing
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49529 Accepted
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49529 [200]: GET /
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49529 Closing
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49530 Accepted
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49531 Accepted
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49530 [200]: GET /css/style.css
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49531 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49530 Closing
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49532 Accepted
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49532 [200]: GET /js/app.js
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49532 Closing
+[Fri Dec 26 19:15:08 2025] 127.0.0.1:49531 Closing
+[Fri Dec 26 19:18:16 2025] 127.0.0.1:49667 Accepted
+[Fri Dec 26 19:18:16 2025] 127.0.0.1:49667 [404]: GET /.env
+[Fri Dec 26 19:18:16 2025] 127.0.0.1:49667 Closing
+[Fri Dec 26 19:19:39 2025] 127.0.0.1:49702 Accepted
+[Fri Dec 26 19:19:39 2025] 127.0.0.1:49702 [200]: GET /join/QU287Y7H
+[Fri Dec 26 19:19:39 2025] 127.0.0.1:49702 Closing
+[Fri Dec 26 19:19:44 2025] 127.0.0.1:49706 Accepted
+[Fri Dec 26 19:19:44 2025] 127.0.0.1:49706 [200]: GET /join/QU287Y7H?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEeV9UmZMCjlNpG88F4aNa7WxXI4ntlT0kFHJte0b4Go-396IlIcE9JTtQgdtA_aem_lzrA1FahEH37KFGa3Y5WCQ
+[Fri Dec 26 19:19:44 2025] 127.0.0.1:49706 Closing
+[Fri Dec 26 19:19:50 2025] 127.0.0.1:49710 Accepted
+[Fri Dec 26 19:19:50 2025] 127.0.0.1:49710 [200]: GET /join/M6FHH8GV
+[Fri Dec 26 19:19:50 2025] 127.0.0.1:49710 Closing
+[Fri Dec 26 19:19:52 2025] 127.0.0.1:49713 Accepted
+[Fri Dec 26 19:19:52 2025] 127.0.0.1:49713 [200]: GET /join/M6FHH8GV?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEeqGsFzxaI2SBs9TAREEx2BwfAsvcrolG32PVzlIyLPP9E3e1U1Ll2RQ51obI_aem_KAvRYAn5rcR_whCAwkIpbg
+[Fri Dec 26 19:19:52 2025] 127.0.0.1:49713 Closing
+[Fri Dec 26 19:19:52 2025] 127.0.0.1:49714 Accepted
+[Fri Dec 26 19:19:52 2025] 127.0.0.1:49714 [404]: GET /favicon.ico
+[Fri Dec 26 19:19:52 2025] 127.0.0.1:49714 Closing
+[Fri Dec 26 19:19:55 2025] 127.0.0.1:49716 Accepted
+[Fri Dec 26 19:19:55 2025] 127.0.0.1:49716 [200]: GET /join/NE6J5MJC
+[Fri Dec 26 19:19:55 2025] 127.0.0.1:49716 Closing
+[Fri Dec 26 19:19:59 2025] 127.0.0.1:49719 Accepted
+[Fri Dec 26 19:19:59 2025] 127.0.0.1:49719 [200]: GET /join/NE6J5MJC?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEeOf4KlxPfHiizF6j50o-RU5QxxspGy9L06EIfIzwUDLoGE1ZWTaD72054LgQ_aem_ZQx2bLzWIfFoF8kqEvGQSw
+[Fri Dec 26 19:19:59 2025] 127.0.0.1:49719 Closing
+[Fri Dec 26 19:20:19 2025] 127.0.0.1:49726 Accepted
+[Fri Dec 26 19:20:19 2025] 127.0.0.1:49726 [200]: GET /join/QU287Y7H?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEeV9UmZMCjlNpG88F4aNa7WxXI4ntlT0kFHJte0b4Go-396IlIcE9JTtQgdtA_aem_lzrA1FahEH37KFGa3Y5WCQ
+[Fri Dec 26 19:20:19 2025] 127.0.0.1:49726 Closing
+[Fri Dec 26 19:20:26 2025] 127.0.0.1:49737 Accepted
+[Fri Dec 26 19:20:26 2025] 127.0.0.1:49737 [200]: GET /join/QU287Y7H
+[Fri Dec 26 19:20:26 2025] 127.0.0.1:49737 Closing
+[Fri Dec 26 19:20:34 2025] 127.0.0.1:49740 Accepted
+[Fri Dec 26 19:20:34 2025] 127.0.0.1:49740 [200]: GET /join/NE6J5MJC?fbclid=IwZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAEeOf4KlxPfHiizF6j50o-RU5QxxspGy9L06EIfIzwUDLoGE1ZWTaD72054LgQ_aem_ZQx2bLzWIfFoF8kqEvGQSw
+[Fri Dec 26 19:20:34 2025] 127.0.0.1:49740 Closing
+[Fri Dec 26 19:20:34 2025] 127.0.0.1:49741 Accepted
+[Fri Dec 26 19:20:34 2025] 127.0.0.1:49741 [200]: GET /join/M6FHH8GV
+[Fri Dec 26 19:20:34 2025] 127.0.0.1:49741 Closing
+[Fri Dec 26 19:20:42 2025] 127.0.0.1:49747 Accepted
+[Fri Dec 26 19:20:42 2025] 127.0.0.1:49747 [200]: GET /join/NE6J5MJC
+[Fri Dec 26 19:20:42 2025] 127.0.0.1:49747 Closing
+[Fri Dec 26 19:20:54 2025] 127.0.0.1:49753 Accepted
+[Fri Dec 26 19:20:54 2025] 127.0.0.1:49753 [200]: GET /join/39EZRPHT
+[Fri Dec 26 19:20:54 2025] 127.0.0.1:49753 Closing
+[Fri Dec 26 19:21:17 2025] 127.0.0.1:49772 Accepted
+[Fri Dec 26 19:21:17 2025] 127.0.0.1:49772 [200]: POST /join/39EZRPHT
+[Fri Dec 26 19:21:17 2025] 127.0.0.1:49772 Closing
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49773 Accepted
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49773 [200]: GET /
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49773 Closing
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49774 Accepted
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49775 Accepted
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49774 [200]: GET /css/style.css
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49776 Accepted
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49776 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49774 Closing
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49775 [200]: GET /js/app.js
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49775 Closing
+[Fri Dec 26 19:21:18 2025] 127.0.0.1:49776 Closing
+[Fri Dec 26 19:26:21 2025] 127.0.0.1:49894 Accepted
+[Fri Dec 26 19:26:21 2025] 127.0.0.1:49894 [400]: GET /join/39EZRPHT
+[Fri Dec 26 19:26:21 2025] 127.0.0.1:49894 Closing
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49903 Accepted
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49903 [200]: GET /
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49903 Closing
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49904 Accepted
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49905 Accepted
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49906 Accepted
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49904 [200]: GET /css/style.css
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49906 [200]: GET /js/app.js
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49905 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49904 Closing
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49906 Closing
+[Fri Dec 26 19:26:55 2025] 127.0.0.1:49905 Closing
+[Fri Dec 26 19:26:58 2025] 127.0.0.1:49907 Accepted
+[Fri Dec 26 19:26:58 2025] 127.0.0.1:49907 [200]: GET /login
+[Fri Dec 26 19:26:58 2025] 127.0.0.1:49907 Closing
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49910 Accepted
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49909 Accepted
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49910 [404]: GET /favicon.ico
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49910 Closing
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49909 [200]: GET /login
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49909 Closing
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49911 Accepted
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49912 Accepted
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49913 Accepted
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49911 [404]: GET /favicon.ico
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49911 Closing
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49913 [404]: GET /apple-touch-icon.png
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49913 Closing
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49912 [404]: GET /apple-touch-icon-precomposed.png
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49912 Closing
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49914 Accepted
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49914 [200]: GET /login
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49914 Closing
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49915 Accepted
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49915 [404]: GET /favicon.ico
+[Fri Dec 26 19:27:05 2025] 127.0.0.1:49915 Closing
+[Fri Dec 26 19:27:14 2025] 127.0.0.1:49924 Accepted
+[Fri Dec 26 19:27:14 2025] 127.0.0.1:49924 [200]: POST /login
+[Fri Dec 26 19:27:14 2025] 127.0.0.1:49924 Closing
+[Fri Dec 26 19:27:14 2025] 127.0.0.1:49925 Accepted
+[Fri Dec 26 19:27:14 2025] 127.0.0.1:49925 [200]: GET /
+[Fri Dec 26 19:27:14 2025] 127.0.0.1:49925 Closing
+[Fri Dec 26 19:27:15 2025] 127.0.0.1:49926 Accepted
+[Fri Dec 26 19:27:15 2025] 127.0.0.1:49927 Accepted
+[Fri Dec 26 19:27:15 2025] 127.0.0.1:49927 [200]: GET /css/style.css
+[Fri Dec 26 19:27:15 2025] 127.0.0.1:49927 Closing
+[Fri Dec 26 19:27:15 2025] 127.0.0.1:49926 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:27:15 2025] 127.0.0.1:49928 Accepted
+[Fri Dec 26 19:27:15 2025] 127.0.0.1:49928 [200]: GET /js/app.js
+[Fri Dec 26 19:27:15 2025] 127.0.0.1:49928 Closing
+[Fri Dec 26 19:27:15 2025] 127.0.0.1:49926 Closing
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49933 Accepted
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49932 Accepted
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49934 Accepted
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49935 Accepted
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49933 [200]: GET /
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49933 Closing
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49935 [404]: GET /favicon.ico
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49935 Closing
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49932 [404]: GET /apple-touch-icon-precomposed.png
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49932 Closing
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49934 [404]: GET /apple-touch-icon.png
+[Fri Dec 26 19:27:23 2025] 127.0.0.1:49934 Closing
+[Fri Dec 26 19:27:24 2025] 127.0.0.1:49936 Accepted
+[Fri Dec 26 19:27:24 2025] 127.0.0.1:49936 [200]: GET /
+[Fri Dec 26 19:27:24 2025] 127.0.0.1:49936 Closing
+[Fri Dec 26 19:27:24 2025] 127.0.0.1:49937 Accepted
+[Fri Dec 26 19:27:24 2025] 127.0.0.1:49937 [404]: GET /favicon.ico
+[Fri Dec 26 19:27:24 2025] 127.0.0.1:49937 Closing
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50600 Accepted
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50600 [200]: GET /
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50600 Closing
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50601 Accepted
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50601 [200]: GET /css/style.css
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50601 Closing
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50602 Accepted
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50602 [200]: GET /js/app.js
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50602 Closing
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50603 Accepted
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50603 [200]: GET /logo_grey.jpg
+[Fri Dec 26 19:54:02 2025] 127.0.0.1:50603 Closing
+[Fri Dec 26 19:54:04 2025] 127.0.0.1:50605 Accepted
+[Fri Dec 26 19:54:04 2025] 127.0.0.1:50605 [200]: GET /login
+[Fri Dec 26 19:54:04 2025] 127.0.0.1:50605 Closing
+[Fri Dec 26 19:54:09 2025] 127.0.0.1:50625 Accepted
+[Fri Dec 26 19:54:09 2025] 127.0.0.1:50625 [401]: POST /login
+[Fri Dec 26 19:54:09 2025] 127.0.0.1:50625 Closing
+[Fri Dec 26 19:54:17 2025] 127.0.0.1:50633 Accepted
+[Fri Dec 26 19:54:17 2025] 127.0.0.1:50633 [401]: POST /login
+[Fri Dec 26 19:54:17 2025] 127.0.0.1:50633 Closing
+[Fri Dec 26 19:54:20 2025] 127.0.0.1:50640 Accepted
+[Fri Dec 26 19:54:20 2025] 127.0.0.1:50640 [401]: POST /login
+[Fri Dec 26 19:54:20 2025] 127.0.0.1:50640 Closing
+[Fri Dec 26 19:54:23 2025] 127.0.0.1:50643 Accepted
+[Fri Dec 26 19:54:23 2025] 127.0.0.1:50643 [401]: POST /login
+[Fri Dec 26 19:54:23 2025] 127.0.0.1:50643 Closing
+[Fri Dec 26 20:02:07 2025] 127.0.0.1:50918 Accepted
+[Fri Dec 26 20:02:07 2025] 127.0.0.1:50918 [200]: GET /login
+[Fri Dec 26 20:02:07 2025] 127.0.0.1:50918 Closing
+[Fri Dec 26 20:02:10 2025] 127.0.0.1:50924 Accepted
+[Fri Dec 26 20:02:10 2025] 127.0.0.1:50924 [200]: POST /login
+[Fri Dec 26 20:02:10 2025] 127.0.0.1:50924 Closing
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50925 Accepted
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50925 [200]: GET /
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50925 Closing
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50926 Accepted
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50927 Accepted
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50926 [200]: GET /logo_grey.jpg
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50927 [200]: GET /css/style.css
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50928 Accepted
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50927 Closing
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50928 [200]: GET /js/app.js
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50928 Closing
+[Fri Dec 26 20:02:11 2025] 127.0.0.1:50926 Closing

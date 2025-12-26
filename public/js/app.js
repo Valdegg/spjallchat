@@ -73,7 +73,6 @@ const dom = {
     onlineCount: document.getElementById('online-count'),
     offlineCount: document.getElementById('offline-count'),
     
-    currentUser: document.getElementById('current-user'),
     inviteBtn: document.getElementById('invite-btn'),
     logoutBtn: document.getElementById('logout-btn'),
     
@@ -443,10 +442,25 @@ function handleAuthOk(payload) {
     // Store user
     localStorage.setItem('spjall_user', JSON.stringify(state.user));
     
-    // Build user map
-    state.onlineUsers.forEach(u => {
-        state.allUsers[u.id] = u;
-    });
+    // Build user map from all_users (if provided) or fallback to online users + conversation members
+    if (payload.all_users && Array.isArray(payload.all_users)) {
+        // Server sent all users - use them
+        payload.all_users.forEach(u => {
+            state.allUsers[u.id] = {
+                id: u.id,
+                nickname: u.nickname
+            };
+        });
+    } else {
+        // Fallback: build from online users and conversation members
+        state.allUsers[state.user.id] = {
+            id: state.user.id,
+            nickname: state.user.nickname
+        };
+        state.onlineUsers.forEach(u => {
+            state.allUsers[u.id] = u;
+        });
+    }
     
     // Initialize messages for all conversations
     state.conversations.forEach(c => {
@@ -454,9 +468,14 @@ function handleAuthOk(payload) {
             state.messages[c.id] = [];
             state.hasMore[c.id] = true;
         }
-        // Add members to user map
+        // Ensure conversation members are in user map
         c.members.forEach(m => {
-            state.allUsers[m.id] = m;
+            if (!state.allUsers[m.id]) {
+                state.allUsers[m.id] = {
+                    id: m.id,
+                    nickname: m.nickname
+                };
+            }
         });
     });
     
@@ -486,11 +505,30 @@ function handleNewMessage(message) {
     const convId = message.conversation_id;
     const isOwnMessage = message.user_id === state.user.id;
     
+    // Ensure sender is in state.allUsers (use user info from message if available)
+    if (message.user) {
+        state.allUsers[message.user_id] = {
+            id: message.user.id,
+            nickname: message.user.nickname
+        };
+    } else if (!state.allUsers[message.user_id]) {
+        // Fallback: create placeholder
+        state.allUsers[message.user_id] = {
+            id: message.user_id,
+            nickname: `user_${message.user_id}`
+        };
+    }
+    
     if (!state.messages[convId]) {
         state.messages[convId] = [];
     }
     
     state.messages[convId].push(message);
+    
+    // Update sidebar if we discovered a new user
+    if (message.user && !state.onlineUsers.find(u => u.id === message.user_id)) {
+        renderSidebar();
+    }
     
     // If this is the current conversation and window is focused, render it
     if (convId === state.currentConversation && state.windowFocused) {
@@ -581,6 +619,30 @@ function handleHistory(payload) {
     
     state.hasMore[convId] = payload.has_more;
     
+    // IMPORTANT: Add users to state.allUsers BEFORE processing messages
+    // This ensures messages render with correct nicknames
+    
+    // Add users from history response to state.allUsers
+    if (payload.users && Array.isArray(payload.users)) {
+        payload.users.forEach(u => {
+            state.allUsers[u.id] = {
+                id: u.id,
+                nickname: u.nickname
+            };
+        });
+    }
+    
+    // Also extract user info from individual messages (fallback)
+    messages.forEach(msg => {
+        if (msg.user && !state.allUsers[msg.user_id]) {
+            state.allUsers[msg.user_id] = {
+                id: msg.user.id,
+                nickname: msg.user.nickname
+            };
+        }
+        // Don't create placeholder here - we want to fetch real user data
+    });
+    
     if (!state.messages[convId]) {
         state.messages[convId] = [];
     }
@@ -588,7 +650,11 @@ function handleHistory(payload) {
     // Prepend messages (they're older)
     state.messages[convId] = [...messages, ...state.messages[convId]];
     
-    // If current conversation, render
+    // Update sidebar first to show any newly discovered users
+    renderSidebar();
+    
+    // If current conversation, render (users should now be in state.allUsers)
+    // Re-render to ensure messages show correct nicknames
     if (convId === state.currentConversation) {
         renderMessages();
     }
@@ -675,7 +741,6 @@ function showMain() {
     dom.loading.style.display = 'none';
     dom.error.style.display = 'none';
     
-    dom.currentUser.textContent = state.user.nickname;
     dom.messageInput.focus();
 }
 
@@ -712,21 +777,38 @@ function renderSidebar() {
         .filter(c => c.type === 'group')
         .map(c => {
             const names = c.members.map(m => m.nickname).join(', ');
+            // Show full names if ≤4 users, otherwise first 3 letters in {} format
+            let displayText;
+            if (c.members.length <= 4) {
+                displayText = c.members.map(m => m.nickname).join(', ');
+            } else {
+                const initials = c.members.map(m => m.nickname.substring(0, 3)).join(', ');
+                displayText = `{${initials}}`;
+            }
             const active = c.id === state.currentConversation ? 'active' : '';
             const unread = state.unread[c.id] ? '<span class="unread-badge"></span>' : '';
-            return `<div class="conversation-item ${active}" data-id="${c.id}" onclick="switchConversation(${c.id})" title="${names}"><span>&amp; ${c.members.length + 1} users</span>${unread}</div>`;
+            return `<div class="conversation-item ${active}" data-id="${c.id}" onclick="switchConversation(${c.id})" title="${names}"><span>&amp; ${displayText}</span>${unread}</div>`;
         })
         .join('');
     
-    // Online users
-    const onlineHtml = state.onlineUsers
-        .filter(u => u.id !== state.user.id)
-        .map(u => `<div class="user-item" onclick="startDm(${u.id})"><span class="user-dot"></span><span class="user-name">${u.nickname}</span></div>`)
+    // Online users - sort so current user is first
+    const sortedOnlineUsers = [...state.onlineUsers].sort((a, b) => {
+        if (a.id === state.user.id) return -1;
+        if (b.id === state.user.id) return 1;
+        return 0;
+    });
+    
+    const onlineHtml = sortedOnlineUsers
+        .map(u => {
+            const isSelf = u.id === state.user.id;
+            const dotClass = isSelf ? 'user-dot user-dot-self' : 'user-dot';
+            return `<div class="user-item" ${!isSelf ? `onclick="startDm(${u.id})"` : ''}><span class="${dotClass}"></span><span class="user-name">${u.nickname}</span></div>`;
+        })
         .join('');
     dom.onlineUsers.innerHTML = onlineHtml || '<div class="user-item"><span class="user-name" style="color: var(--text-dim)">—</span></div>';
-    dom.onlineCount.textContent = `(${state.onlineUsers.filter(u => u.id !== state.user.id).length})`;
+    dom.onlineCount.textContent = `(${state.onlineUsers.length})`;
     
-    // Offline users (known users who are not online)
+    // Offline users (known users who are not online, excluding current user)
     const onlineIds = new Set(state.onlineUsers.map(u => u.id));
     const offlineUsers = Object.values(state.allUsers).filter(u => !onlineIds.has(u.id) && u.id !== state.user.id);
     
@@ -740,31 +822,63 @@ function renderSidebar() {
 function renderMessages() {
     const messages = state.messages[state.currentConversation] || [];
     
-    dom.messages.innerHTML = messages.map(m => createMessageHtml(m)).join('');
+    // Add dividers for long pauses (more than 30 minutes)
+    const PAUSE_THRESHOLD = 30 * 60; // 30 minutes in seconds
+    let html = '';
+    
+    for (let i = 0; i < messages.length; i++) {
+        const msg = messages[i];
+        const prevMsg = messages[i - 1];
+        
+        // Check if there's a long pause before this message
+        if (prevMsg && (msg.created_at - prevMsg.created_at) > PAUSE_THRESHOLD) {
+            html += '<div class="message-divider"></div>';
+        }
+        
+        // Check if this is a consecutive message from the same user
+        const isConsecutive = prevMsg && prevMsg.user_id === msg.user_id;
+        
+        html += createMessageHtml(msg, isConsecutive);
+    }
+    
+    dom.messages.innerHTML = html;
     scrollToBottom();
 }
 
-function createMessageHtml(msg) {
+function createMessageHtml(msg, isConsecutive = false) {
     const user = state.allUsers[msg.user_id];
     const nick = user ? user.nickname : `user_${msg.user_id}`;
     const isSelf = msg.user_id === state.user.id;
     const time = formatTime(msg.created_at);
+    const spacingClass = isConsecutive ? 'message-consecutive' : 'message-new-sender';
     
-    return `<div class="message">
+    return `<div class="message ${spacingClass}">
         <span class="time">${time}</span>
         <span class="nick ${isSelf ? 'self' : ''}">&lt;${nick}&gt;</span>
-        <span class="text">${escapeHtml(msg.content)}</span>
+        <span class="text">${linkify(escapeHtml(msg.content))}</span>
     </div>`;
 }
 
 function appendMessage(msg) {
-    dom.messages.insertAdjacentHTML('beforeend', createMessageHtml(msg));
+    // Check if this is a consecutive message from the same user
+    // Look at the last message element in the DOM (before we add this one)
+    const lastMessageEl = dom.messages.lastElementChild;
+    let isConsecutive = false;
+    
+    if (lastMessageEl && lastMessageEl.classList.contains('message')) {
+        // Get the last message from state (before this one was added)
+        const messages = state.messages[msg.conversation_id] || [];
+        const lastMsg = messages[messages.length - 2]; // -2 because current msg is already added
+        isConsecutive = lastMsg && lastMsg.user_id === msg.user_id;
+    }
+    
+    dom.messages.insertAdjacentHTML('beforeend', createMessageHtml(msg, isConsecutive));
 }
 
 function addSystemMessage(text) {
     const time = formatTime(Math.floor(Date.now() / 1000));
     dom.messages.insertAdjacentHTML('beforeend', 
-        `<div class="message system"><span class="time">${time}</span> ${escapeHtml(text)}</div>`
+        `<div class="message system">— ${escapeHtml(text)} —</div>`
     );
     scrollToBottom();
 }
@@ -802,7 +916,7 @@ function switchConversation(convId) {
     const conv = state.conversations.find(c => c.id === convId);
     if (conv) {
         if (conv.type === 'lobby') {
-            dom.conversationName.textContent = '# Lobby';
+            dom.conversationName.textContent = '';
         } else if (conv.type === 'dm') {
             const other = conv.members[0];
             dom.conversationName.textContent = '@ ' + (other ? other.nickname : 'Unknown');
@@ -904,6 +1018,17 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+function linkify(text) {
+    // URL regex pattern - matches http://, https://, and www.
+    const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/gi;
+    
+    return text.replace(urlRegex, (url) => {
+        // Add http:// if it starts with www.
+        const href = url.startsWith('www.') ? 'http://' + url : url;
+        return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" class="message-link">${escapeHtml(url)}</a>`;
+    });
 }
 
 // Make switchConversation and startDm available globally for onclick

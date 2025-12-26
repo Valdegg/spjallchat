@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spjall</title>
+    <title>SpjallChat</title>
+    <link rel="icon" type="image/png" href="/logo_grey.jpg">
+    <link rel="apple-touch-icon" href="/logo_grey.jpg">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -41,6 +43,10 @@
 
             <!-- Sidebar (Right) -->
             <div class="sidebar">
+                <div class="sidebar-header">
+                    <span class="app-name">SpjallChat</span>
+                    <img src="/logo_grey.jpg" alt="SpjallChat" class="logo">
+                </div>
                 <div class="sidebar-section">
                     <div class="section-header">Conversations</div>
                     <div class="conversation-item active" data-id="1"><span># Lobby</span></div>
@@ -67,10 +73,7 @@
                 </div>
 
                 <div class="sidebar-section sidebar-footer">
-                    <div class="user-info">
-                        <span id="current-user">—</span>
-                    </div>
-                    <button id="group-btn" class="btn-small">+ Group</button>
+                    <button id="group-btn" class="btn-small">+ Roundtable</button>
                     <button id="invite-btn" class="btn-small">+ Invite</button>
                     <button id="logout-btn" class="btn-small btn-dim">Logout</button>
                 </div>
@@ -95,7 +98,7 @@
     <!-- Group Modal -->
     <div id="group-modal" class="modal" style="display: none;">
         <div class="modal-content">
-            <div class="modal-header">New Group Chat</div>
+            <div class="modal-header">New Roundtable</div>
             <div class="modal-body" style="flex-direction: column; gap: 8px;">
                 <div style="color: var(--text-dim); font-size: 11px; margin-bottom: 4px;">Select members:</div>
                 <div id="group-user-list" style="max-height: 200px; overflow-y: auto;"></div>

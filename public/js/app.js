@@ -85,7 +85,12 @@ const dom = {
     groupModal: document.getElementById('group-modal'),
     groupUserList: document.getElementById('group-user-list'),
     createGroup: document.getElementById('create-group'),
-    closeGroup: document.getElementById('close-group')
+    closeGroup: document.getElementById('close-group'),
+
+    // Mobile
+    mobileMenuBtn: document.getElementById('mobile-menu-btn'),
+    sidebar: document.getElementById('sidebar'),
+    sidebarOverlay: document.getElementById('sidebar-overlay')
 };
 
 // ============================================================
@@ -300,6 +305,20 @@ function setupEventListeners() {
         // Ask for permission after first user interaction
         document.addEventListener('click', requestNotificationPermission, { once: true });
     }
+
+    // Mobile sidebar toggle
+    dom.mobileMenuBtn.addEventListener('click', toggleSidebar);
+    dom.sidebarOverlay.addEventListener('click', closeSidebar);
+}
+
+function toggleSidebar() {
+    dom.sidebar.classList.toggle('open');
+    dom.sidebarOverlay.classList.toggle('visible');
+}
+
+function closeSidebar() {
+    dom.sidebar.classList.remove('open');
+    dom.sidebarOverlay.classList.remove('visible');
 }
 
 function requestNotificationPermission() {
@@ -905,7 +924,10 @@ function sendMessage() {
 
 function switchConversation(convId) {
     state.currentConversation = convId;
-    
+
+    // Close sidebar on mobile
+    closeSidebar();
+
     // Clear unread for this conversation
     if (state.unread[convId]) {
         delete state.unread[convId];

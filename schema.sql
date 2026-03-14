@@ -18,8 +18,21 @@ CREATE TABLE IF NOT EXISTS invites (
     used_by INTEGER,
     created_at INTEGER NOT NULL,
     used_at INTEGER,
+    conversation_id INTEGER,
+    total_spots INTEGER,
     FOREIGN KEY (created_by) REFERENCES users(id),
-    FOREIGN KEY (used_by) REFERENCES users(id)
+    FOREIGN KEY (used_by) REFERENCES users(id),
+    FOREIGN KEY (conversation_id) REFERENCES conversations(id)
+);
+
+-- Invite uses tracking
+CREATE TABLE IF NOT EXISTS invite_uses (
+    invite_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
+    used_at INTEGER NOT NULL,
+    PRIMARY KEY (invite_id, user_id),
+    FOREIGN KEY (invite_id) REFERENCES invites(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 -- Conversations table

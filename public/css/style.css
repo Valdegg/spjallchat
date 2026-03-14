@@ -59,6 +59,7 @@ html, body {
 /* Chat Area */
 .chat-area {
     flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--border);
@@ -69,6 +70,8 @@ html, body {
     border-bottom: 1px solid var(--border);
     color: var(--text-bright);
     font-weight: 500;
+    display: flex;
+    align-items: center;
 }
 
 .chat-header:empty {
@@ -538,5 +541,220 @@ html, body {
     padding: 8px;
     color: var(--text-dim);
     font-size: 11px;
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-dim);
+    font-family: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0 8px;
+    margin-left: auto;
+    line-height: 1;
+}
+
+.mobile-menu-btn:hover {
+    color: var(--text);
+}
+
+/* Sidebar overlay backdrop (mobile only) */
+.sidebar-overlay {
+    display: none;
+}
+
+/* Open spots stepper in group modal */
+.open-spots-stepper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 8px;
+    border-top: 1px solid var(--border);
+    margin-top: 8px;
+}
+
+.stepper-label {
+    color: var(--text-dim);
+    font-size: 11px;
+    flex: 1;
+}
+
+.stepper-btn {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stepper-btn:hover {
+    border-color: var(--accent-dim);
+    color: var(--text-bright);
+}
+
+#spots-count {
+    color: var(--text-bright);
+    font-size: 13px;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Roundtable info in chat header */
+.roundtable-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 12px;
+    font-size: 11px;
+}
+
+.spots-text {
+    color: var(--text-dim);
+}
+
+.spots-text.full {
+    color: var(--text-dim);
+    font-style: italic;
+}
+
+.copy-invite-btn {
+    padding: 2px 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-family: inherit;
+    font-size: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.copy-invite-btn:hover {
+    border-color: var(--accent-dim);
+    background: var(--bg-hover);
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    html, body {
+        font-size: 14px;
+        /* Prevent iOS zoom on input focus */
+        -webkit-text-size-adjust: 100%;
+    }
+
+    /* Show mobile menu button */
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .chat-header {
+        padding: 10px 12px;
+    }
+
+    /* Sidebar: off-screen overlay on mobile */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 280px;
+        height: 100%;
+        z-index: 1000;
+        transition: right 0.25s ease;
+        border-left: 1px solid var(--border);
+        overflow-y: auto;
+    }
+
+    .sidebar.open {
+        right: 0;
+    }
+
+    /* Dark backdrop when sidebar is open */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 999;
+    }
+
+    .sidebar-overlay.visible {
+        display: block;
+    }
+
+    /* Chat area takes full width */
+    .chat-area {
+        border-right: none;
+    }
+
+    /* Smaller logo on mobile */
+    .sidebar-header .logo {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Larger touch targets */
+    .conversation-item {
+        padding: 10px 12px;
+        min-height: 40px;
+    }
+
+    .user-item {
+        padding: 8px 12px 8px 20px;
+        min-height: 40px;
+    }
+
+    .btn-small {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .section-header {
+        padding: 8px 12px 4px 12px;
+        font-size: 10px;
+    }
+
+    /* Input area */
+    #message-input {
+        padding: 12px;
+        font-size: 16px; /* Prevents iOS zoom */
+    }
+
+    /* Modal adjustments */
+    .modal-content {
+        margin: 16px;
+        min-width: unset;
+        width: calc(100% - 32px);
+        max-width: 400px;
+    }
+
+    .group-user-option {
+        padding: 10px 8px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+        right: -100%;
+    }
+
+    .sidebar.open {
+        right: 0;
+    }
 }
 

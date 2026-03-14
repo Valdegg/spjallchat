@@ -85,7 +85,12 @@ const dom = {
     groupModal: document.getElementById('group-modal'),
     groupUserList: document.getElementById('group-user-list'),
     createGroup: document.getElementById('create-group'),
-    closeGroup: document.getElementById('close-group')
+    closeGroup: document.getElementById('close-group'),
+
+    // Mobile
+    mobileMenuBtn: document.getElementById('mobile-menu-btn'),
+    sidebar: document.getElementById('sidebar'),
+    sidebarOverlay: document.getElementById('sidebar-overlay')
 };
 
 // ============================================================
@@ -275,13 +280,14 @@ function setupEventListeners() {
     dom.createGroup.addEventListener('click', () => {
         const checked = dom.groupUserList.querySelectorAll('input:checked');
         const userIds = Array.from(checked).map(el => parseInt(el.value));
-        
-        if (userIds.length < 1) {
-            alert('Select at least 1 other user');
+        const openSpots = parseInt(document.getElementById('spots-count')?.textContent || '0');
+
+        if (userIds.length + openSpots < 2) {
+            alert('Select at least 2 other participants (members + open spots)');
             return;
         }
-        
-        send('create_group', { user_ids: userIds });
+
+        send('create_group', { user_ids: userIds, open_spots: openSpots });
         dom.groupModal.style.display = 'none';
     });
     
@@ -300,6 +306,25 @@ function setupEventListeners() {
         // Ask for permission after first user interaction
         document.addEventListener('click', requestNotificationPermission, { once: true });
     }
+
+    // Mobile sidebar toggle
+    dom.mobileMenuBtn.addEventListener('click', toggleSidebar);
+    dom.sidebarOverlay.addEventListener('click', closeSidebar);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeSidebar();
+    });
+}
+
+function toggleSidebar() {
+    const isOpen = dom.sidebar.classList.toggle('open');
+    dom.sidebarOverlay.classList.toggle('visible');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+
+function closeSidebar() {
+    dom.sidebar.classList.remove('open');
+    dom.sidebarOverlay.classList.remove('visible');
+    document.body.style.overflow = '';
 }
 
 function requestNotificationPermission() {
@@ -418,6 +443,12 @@ function handleMessage(msg) {
         case 'conversation_created':
             handleConversationCreated(payload);
             break;
+        case 'member_joined':
+            handleMemberJoined(payload);
+            break;
+        case 'roundtable_invite':
+            handleRoundtableInvite(payload);
+            break;
         case 'invite_created':
             handleInviteCreated(payload);
             break;
@@ -489,6 +520,16 @@ function handleAuthOk(payload) {
     
     // Start heartbeat
     startPing();
+
+    // Check for pending conversation (from roundtable invite)
+    const pendingConv = localStorage.getItem('spjall_pending_conversation');
+    if (pendingConv) {
+        localStorage.removeItem('spjall_pending_conversation');
+        const convId = parseInt(pendingConv);
+        if (convId && state.conversations.find(c => c.id === convId)) {
+            switchConversation(convId);
+        }
+    }
 }
 
 function handleAuthError(payload) {
@@ -695,21 +736,62 @@ function handleUserOffline(payload) {
 
 function handleConversationCreated(payload) {
     const conv = payload.conversation;
-    
+
     // Add members to user map
     conv.members.forEach(m => {
         state.allUsers[m.id] = m;
     });
-    
+
     // Add to conversations
     state.conversations.push(conv);
     state.messages[conv.id] = [];
     state.hasMore[conv.id] = false;
-    
+
     renderSidebar();
-    
+
     // Switch to the new conversation
     switchConversation(conv.id);
+
+    // If this conversation has an invite, show the invite modal
+    if (conv.invite && conv.invite.url) {
+        dom.inviteUrl.value = conv.invite.url;
+        dom.inviteModal.style.display = 'flex';
+    }
+}
+
+function handleMemberJoined(payload) {
+    const convId = payload.conversation_id;
+    const newUser = payload.user;
+
+    // Add user to allUsers
+    state.allUsers[newUser.id] = newUser;
+
+    // Find the conversation and add the member if not already there
+    const conv = state.conversations.find(c => c.id === convId);
+    if (conv && !conv.members.find(m => m.id === newUser.id)) {
+        conv.members.push(newUser);
+
+        // Update invite spots if present
+        if (conv.invite && payload.spots_remaining !== null) {
+            conv.invite.spots_remaining = payload.spots_remaining;
+        }
+
+        renderSidebar();
+
+        // If viewing this conversation, update the header
+        if (state.currentConversation === convId) {
+            dom.conversationName.textContent = '& ' + conv.members.map(m => m.nickname).join(', ');
+            updateRoundtableInfo(conv);
+        }
+
+        addSystemMessage(`${newUser.nickname} joined the roundtable`);
+    }
+}
+
+function handleRoundtableInvite(payload) {
+    // Show invite modal with the roundtable invite URL
+    dom.inviteUrl.value = payload.url;
+    dom.inviteModal.style.display = 'flex';
 }
 
 function handleInviteCreated(payload) {
@@ -905,7 +987,10 @@ function sendMessage() {
 
 function switchConversation(convId) {
     state.currentConversation = convId;
-    
+
+    // Close sidebar on mobile
+    closeSidebar();
+
     // Clear unread for this conversation
     if (state.unread[convId]) {
         delete state.unread[convId];
@@ -923,8 +1008,10 @@ function switchConversation(convId) {
         } else {
             dom.conversationName.textContent = '& ' + conv.members.map(m => m.nickname).join(', ');
         }
+        // Update roundtable info
+        updateRoundtableInfo(conv);
     }
-    
+
     // Update sidebar active state
     document.querySelectorAll('.conversation-item').forEach(el => {
         el.classList.toggle('active', parseInt(el.dataset.id) === convId);
@@ -980,14 +1067,8 @@ function startDm(userId) {
 }
 
 function openGroupModal() {
-    // Get all known users except self
     const users = Object.values(state.allUsers).filter(u => u.id !== state.user.id);
-    
-    if (users.length < 1) {
-        alert('No other users to create a group with');
-        return;
-    }
-    
+
     // Render checkboxes
     dom.groupUserList.innerHTML = users.map(u => {
         const isOnline = state.onlineUsers.some(ou => ou.id === u.id);
@@ -999,7 +1080,35 @@ function openGroupModal() {
             </div>
         `;
     }).join('');
-    
+
+    // Remove old stepper if it exists (avoids stale closure state)
+    const oldStepper = document.getElementById('open-spots-stepper');
+    if (oldStepper) oldStepper.remove();
+
+    const stepperHtml = `
+        <div id="open-spots-stepper" class="open-spots-stepper">
+            <span class="stepper-label">Open spots:</span>
+            <button type="button" id="spots-minus" class="stepper-btn">−</button>
+            <span id="spots-count">0</span>
+            <button type="button" id="spots-plus" class="stepper-btn">+</button>
+        </div>
+    `;
+    dom.groupUserList.insertAdjacentHTML('afterend', stepperHtml);
+
+    let spotCount = 0;
+    document.getElementById('spots-minus').addEventListener('click', () => {
+        if (spotCount > 0) {
+            spotCount--;
+            document.getElementById('spots-count').textContent = spotCount;
+        }
+    });
+    document.getElementById('spots-plus').addEventListener('click', () => {
+        if (spotCount < 20) {
+            spotCount++;
+            document.getElementById('spots-count').textContent = spotCount;
+        }
+    });
+
     dom.groupModal.style.display = 'flex';
 }
 
@@ -1030,6 +1139,45 @@ function linkify(text) {
         return `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer" class="message-link">${escapeHtml(url)}</a>`;
     });
 }
+
+function updateRoundtableInfo(conv) {
+    // Remove existing roundtable info
+    const existing = document.getElementById('roundtable-info');
+    if (existing) existing.remove();
+
+    if (!conv || conv.type !== 'group' || !conv.invite) return;
+
+    const spots = conv.invite.spots_remaining;
+    const total = conv.invite.total_spots;
+    const isFull = spots <= 0;
+
+    let infoHtml = `<div id="roundtable-info" class="roundtable-info">`;
+    if (isFull) {
+        infoHtml += `<span class="spots-text full">Table is full</span>`;
+    } else {
+        infoHtml += `<span class="spots-text">${spots}/${total} spots open</span>`;
+        infoHtml += `<button class="copy-invite-btn" onclick="copyRoundtableInvite()" title="Copy invite link">Copy invite</button>`;
+    }
+    infoHtml += `</div>`;
+
+    // Insert after the conversation name in the header
+    dom.conversationName.insertAdjacentHTML('afterend', infoHtml);
+}
+
+function copyRoundtableInvite() {
+    const conv = state.conversations.find(c => c.id === state.currentConversation);
+    if (conv && conv.invite && conv.invite.url) {
+        navigator.clipboard.writeText(conv.invite.url).then(() => {
+            const btn = document.querySelector('.copy-invite-btn');
+            if (btn) {
+                btn.textContent = 'Copied!';
+                setTimeout(() => { btn.textContent = 'Copy invite'; }, 2000);
+            }
+        });
+    }
+}
+
+window.copyRoundtableInvite = copyRoundtableInvite;
 
 // Make switchConversation and startDm available globally for onclick
 window.switchConversation = switchConversation;

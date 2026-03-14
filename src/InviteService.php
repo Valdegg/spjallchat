@@ -33,6 +33,29 @@ class InviteService
     }
 
     /**
+     * Generate an invite code linked to a roundtable conversation
+     * @param int $createdBy User ID of creator
+     * @param int $conversationId The roundtable conversation ID
+     * @param int $totalSpots Number of open spots
+     * @return string The invite code
+     */
+    public static function createForRoundtable(int $createdBy, int $conversationId, int $totalSpots): string
+    {
+        $code = self::generateCode();
+
+        while (self::exists($code)) {
+            $code = self::generateCode();
+        }
+
+        Database::execute(
+            'INSERT INTO invites (code, created_by, created_at, conversation_id, total_spots) VALUES (?, ?, ?, ?, ?)',
+            [$code, $createdBy, time(), $conversationId, $totalSpots]
+        );
+
+        return $code;
+    }
+
+    /**
      * Check if an invite code exists (used or not)
      */
     public static function exists(string $code): bool
@@ -51,16 +74,29 @@ class InviteService
     public static function validate(string $code): ?array
     {
         $invite = Database::queryOne(
-            'SELECT id, code, created_by, used_by, created_at, used_at FROM invites WHERE code = ?',
+            'SELECT id, code, created_by, used_by, created_at, used_at, conversation_id, total_spots FROM invites WHERE code = ?',
             [strtoupper($code)]
         );
 
         if ($invite === null) {
-            return null; // Code doesn't exist
+            return null;
         }
 
+        // Roundtable invite: check spots
+        if ($invite['conversation_id'] !== null) {
+            $useCount = Database::queryOne(
+                'SELECT COUNT(*) as cnt FROM invite_uses WHERE invite_id = ?',
+                [$invite['id']]
+            );
+            if ((int)$useCount['cnt'] >= (int)$invite['total_spots']) {
+                return null; // All spots filled
+            }
+            return $invite;
+        }
+
+        // Plain invite: check used_by
         if ($invite['used_by'] !== null) {
-            return null; // Already used
+            return null;
         }
 
         return $invite;
@@ -100,12 +136,82 @@ class InviteService
     }
 
     /**
+     * Consume a roundtable invite spot (atomic)
+     * @param int $inviteId The invite ID
+     * @param int $userId The user claiming the spot
+     * @return bool True if spot was claimed
+     */
+    public static function consumeRoundtableSpot(int $inviteId, int $userId): bool
+    {
+        $pdo = Database::get();
+        $pdo->beginTransaction();
+        try {
+            // Check if user already used this invite
+            $existing = Database::queryOne(
+                'SELECT 1 FROM invite_uses WHERE invite_id = ? AND user_id = ?',
+                [$inviteId, $userId]
+            );
+            if ($existing !== null) {
+                $pdo->rollBack();
+                return false;
+            }
+
+            // Atomic spot claim: only insert if spots remain
+            $stmt = $pdo->prepare(
+                'INSERT INTO invite_uses (invite_id, user_id, used_at)
+                 SELECT ?, ?, ?
+                 WHERE (SELECT COUNT(*) FROM invite_uses WHERE invite_id = ?) <
+                       (SELECT total_spots FROM invites WHERE id = ?)'
+            );
+            $stmt->execute([$inviteId, $userId, time(), $inviteId, $inviteId]);
+
+            if ($stmt->rowCount() === 0) {
+                $pdo->rollBack();
+                return false; // No spots left
+            }
+
+            $pdo->commit();
+            return true;
+        } catch (\Exception $e) {
+            $pdo->rollBack();
+            throw $e;
+        }
+    }
+
+    /**
+     * Get remaining spots for a roundtable invite
+     */
+    public static function getSpotsRemaining(int $inviteId): int
+    {
+        $result = Database::queryOne(
+            'SELECT i.total_spots - COUNT(iu.invite_id) as remaining
+             FROM invites i
+             LEFT JOIN invite_uses iu ON i.id = iu.invite_id
+             WHERE i.id = ?
+             GROUP BY i.id',
+            [$inviteId]
+        );
+        return $result ? max(0, (int)$result['remaining']) : 0;
+    }
+
+    /**
+     * Get the roundtable invite for a conversation
+     */
+    public static function getByConversationId(int $conversationId): ?array
+    {
+        return Database::queryOne(
+            'SELECT id, code, created_by, conversation_id, total_spots, created_at FROM invites WHERE conversation_id = ?',
+            [$conversationId]
+        );
+    }
+
+    /**
      * Get invite by code (regardless of used status)
      */
     public static function getByCode(string $code): ?array
     {
         return Database::queryOne(
-            'SELECT id, code, created_by, used_by, created_at, used_at FROM invites WHERE code = ?',
+            'SELECT id, code, created_by, used_by, created_at, used_at, conversation_id, total_spots FROM invites WHERE code = ?',
             [strtoupper($code)]
         );
     }

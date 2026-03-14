@@ -135,7 +135,11 @@ class SpjallServer
             case 'create_invite':
                 $this->handleCreateInvite($conn, $payload);
                 break;
-                
+
+            case 'get_roundtable_invite':
+                $this->handleGetRoundtableInvite($conn, $payload);
+                break;
+
             default:
                 $conn->sendError("Unknown event type: $type", 'UNKNOWN_EVENT');
         }
@@ -203,6 +207,37 @@ class SpjallServer
             $this->broadcastExcept('user_online', [
                 'user' => ['id' => $user['id'], 'nickname' => $user['nickname']]
             ], $conn->getId());
+        }
+
+        // Notify existing roundtable members about this user (only for groups with active invites)
+        $userConvs = Database::query(
+            "SELECT c.id as conversation_id FROM conversations c
+             INNER JOIN conversation_members cm ON c.id = cm.conversation_id
+             INNER JOIN invites i ON i.conversation_id = c.id
+             WHERE cm.user_id = ? AND c.type = 'group'",
+            [$user['id']]
+        );
+
+        foreach ($userConvs as $conv) {
+            $convId = (int)$conv['conversation_id'];
+            $invite = InviteService::getByConversationId($convId);
+            $spotsRemaining = $invite ? InviteService::getSpotsRemaining($invite['id']) : 0;
+
+            $members = Database::query(
+                'SELECT user_id FROM conversation_members WHERE conversation_id = ? AND user_id != ?',
+                [$convId, $user['id']]
+            );
+
+            foreach ($members as $member) {
+                $this->sendToUser((int)$member['user_id'], 'member_joined', [
+                    'conversation_id' => $convId,
+                    'user' => [
+                        'id' => $user['id'],
+                        'nickname' => $user['nickname']
+                    ],
+                    'spots_remaining' => $spotsRemaining
+                ]);
+            }
         }
     }
 
@@ -348,20 +383,21 @@ class SpjallServer
     private function handleCreateGroup(Connection $conn, array $payload): void
     {
         $userIds = $payload['user_ids'] ?? [];
+        $openSpots = min(20, max(0, (int)($payload['open_spots'] ?? 0)));
         $userId = $conn->getUserId();
 
-        if (!is_array($userIds) || count($userIds) < 2) {
-            $conn->sendError('Group requires at least 2 other users', 'INVALID_REQUEST');
+        if (!is_array($userIds)) {
+            $userIds = [];
+        }
+
+        // Validate minimum: selected users + open spots must be >= 2 (so total with creator >= 3)
+        if (count($userIds) + $openSpots < 2) {
+            $conn->sendError('Group requires at least 3 total participants (members + open spots)', 'INVALID_REQUEST');
             return;
         }
 
         // Add creator to the list
         $allUserIds = array_unique(array_merge([$userId], array_map('intval', $userIds)));
-
-        if (count($allUserIds) < 3) {
-            $conn->sendError('Group requires at least 3 total members', 'INVALID_REQUEST');
-            return;
-        }
 
         // Verify all users exist
         $members = [];
@@ -390,6 +426,14 @@ class SpjallServer
             );
         }
 
+        // Create roundtable invite if open spots requested
+        $inviteCode = null;
+        $inviteUrl = null;
+        if ($openSpots > 0) {
+            $inviteCode = InviteService::createForRoundtable($userId, $convId, $openSpots);
+            $inviteUrl = InviteService::getUrl($inviteCode);
+        }
+
         // Notify all members
         foreach ($allUserIds as $uid) {
             $otherMembers = array_filter($members, fn($m) => $m['id'] !== $uid);
@@ -401,7 +445,17 @@ class SpjallServer
                     'nickname' => $m['nickname']
                 ], $otherMembers))
             ];
-            
+
+            // Include invite info for the creator
+            if ($uid === $userId && $inviteCode !== null) {
+                $conversation['invite'] = [
+                    'code' => $inviteCode,
+                    'url' => $inviteUrl,
+                    'total_spots' => $openSpots,
+                    'spots_remaining' => $openSpots
+                ];
+            }
+
             $this->sendToUser($uid, 'conversation_created', ['conversation' => $conversation]);
         }
     }
@@ -488,6 +542,36 @@ class SpjallServer
         $conn->sendEvent('invite_created', [
             'code' => $code,
             'url' => $url
+        ]);
+    }
+
+    /**
+     * Handle getting roundtable invite info
+     */
+    private function handleGetRoundtableInvite(Connection $conn, array $payload): void
+    {
+        $conversationId = (int)($payload['conversation_id'] ?? 0);
+        $userId = $conn->getUserId();
+
+        if (!$this->canAccessConversation($userId, $conversationId)) {
+            $conn->sendError('Not a member of this conversation', 'NOT_MEMBER');
+            return;
+        }
+
+        $invite = InviteService::getByConversationId($conversationId);
+        if ($invite === null) {
+            $conn->sendError('No invite link for this conversation', 'NO_INVITE');
+            return;
+        }
+
+        $spotsRemaining = InviteService::getSpotsRemaining($invite['id']);
+
+        $conn->sendEvent('roundtable_invite', [
+            'conversation_id' => $conversationId,
+            'code' => $invite['code'],
+            'url' => InviteService::getUrl($invite['code']),
+            'total_spots' => (int)$invite['total_spots'],
+            'spots_remaining' => $spotsRemaining
         ]);
     }
 
@@ -583,7 +667,7 @@ class SpjallServer
                 [$conv['id'], $userId]
             );
 
-            $conversations[] = [
+            $convData = [
                 'id' => (int) $conv['id'],
                 'type' => $conv['type'],
                 'members' => array_map(fn($m) => [
@@ -591,6 +675,22 @@ class SpjallServer
                     'nickname' => $m['nickname']
                 ], $members)
             ];
+
+            // Include invite info for group conversations
+            if ($conv['type'] === 'group') {
+                $invite = InviteService::getByConversationId((int)$conv['id']);
+                if ($invite !== null) {
+                    $spotsRemaining = InviteService::getSpotsRemaining($invite['id']);
+                    $convData['invite'] = [
+                        'code' => $invite['code'],
+                        'url' => InviteService::getUrl($invite['code']),
+                        'total_spots' => (int)$invite['total_spots'],
+                        'spots_remaining' => $spotsRemaining
+                    ];
+                }
+            }
+
+            $conversations[] = $convData;
         }
 
         return $conversations;

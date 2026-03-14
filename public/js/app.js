@@ -249,6 +249,7 @@ function setupEventListeners() {
     
     // Invite button
     dom.inviteBtn.addEventListener('click', () => {
+        closeSidebar();
         send('create_invite', {});
     });
     
@@ -271,7 +272,10 @@ function setupEventListeners() {
     });
     
     // Group button
-    dom.groupBtn.addEventListener('click', openGroupModal);
+    dom.groupBtn.addEventListener('click', () => {
+        closeSidebar();
+        openGroupModal();
+    });
     
     dom.closeGroup.addEventListener('click', () => {
         dom.groupModal.style.display = 'none';

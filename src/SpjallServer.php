@@ -383,7 +383,7 @@ class SpjallServer
     private function handleCreateGroup(Connection $conn, array $payload): void
     {
         $userIds = $payload['user_ids'] ?? [];
-        $openSpots = max(0, (int)($payload['open_spots'] ?? 0));
+        $openSpots = min(20, max(0, (int)($payload['open_spots'] ?? 0)));
         $userId = $conn->getUserId();
 
         if (!is_array($userIds)) {

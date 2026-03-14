@@ -209,13 +209,14 @@ class SpjallServer
             ], $conn->getId());
         }
 
-        // Notify existing roundtable members about this user (only for groups with active invites)
+        // Notify existing roundtable members about this user (only for recent joins via invite)
+        $recentThreshold = time() - 60; // Only broadcast for members who joined in the last 60 seconds
         $userConvs = Database::query(
             "SELECT c.id as conversation_id FROM conversations c
              INNER JOIN conversation_members cm ON c.id = cm.conversation_id
              INNER JOIN invites i ON i.conversation_id = c.id
-             WHERE cm.user_id = ? AND c.type = 'group'",
-            [$user['id']]
+             WHERE cm.user_id = ? AND c.type = 'group' AND cm.joined_at > ?",
+            [$user['id'], $recentThreshold]
         );
 
         foreach ($userConvs as $conv) {

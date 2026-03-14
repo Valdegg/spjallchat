@@ -348,20 +348,21 @@ class SpjallServer
     private function handleCreateGroup(Connection $conn, array $payload): void
     {
         $userIds = $payload['user_ids'] ?? [];
+        $openSpots = max(0, (int)($payload['open_spots'] ?? 0));
         $userId = $conn->getUserId();
 
-        if (!is_array($userIds) || count($userIds) < 2) {
-            $conn->sendError('Group requires at least 2 other users', 'INVALID_REQUEST');
+        if (!is_array($userIds)) {
+            $userIds = [];
+        }
+
+        // Validate minimum: selected users + open spots must be >= 2 (so total with creator >= 3)
+        if (count($userIds) + $openSpots < 2) {
+            $conn->sendError('Group requires at least 3 total participants (members + open spots)', 'INVALID_REQUEST');
             return;
         }
 
         // Add creator to the list
         $allUserIds = array_unique(array_merge([$userId], array_map('intval', $userIds)));
-
-        if (count($allUserIds) < 3) {
-            $conn->sendError('Group requires at least 3 total members', 'INVALID_REQUEST');
-            return;
-        }
 
         // Verify all users exist
         $members = [];
@@ -390,6 +391,14 @@ class SpjallServer
             );
         }
 
+        // Create roundtable invite if open spots requested
+        $inviteCode = null;
+        $inviteUrl = null;
+        if ($openSpots > 0) {
+            $inviteCode = InviteService::createForRoundtable($userId, $convId, $openSpots);
+            $inviteUrl = InviteService::getUrl($inviteCode);
+        }
+
         // Notify all members
         foreach ($allUserIds as $uid) {
             $otherMembers = array_filter($members, fn($m) => $m['id'] !== $uid);
@@ -401,7 +410,17 @@ class SpjallServer
                     'nickname' => $m['nickname']
                 ], $otherMembers))
             ];
-            
+
+            // Include invite info for the creator
+            if ($uid === $userId && $inviteCode !== null) {
+                $conversation['invite'] = [
+                    'code' => $inviteCode,
+                    'url' => $inviteUrl,
+                    'total_spots' => $openSpots,
+                    'spots_remaining' => $openSpots
+                ];
+            }
+
             $this->sendToUser($uid, 'conversation_created', ['conversation' => $conversation]);
         }
     }

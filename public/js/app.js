@@ -309,16 +309,21 @@ function setupEventListeners() {
     // Mobile sidebar toggle
     dom.mobileMenuBtn.addEventListener('click', toggleSidebar);
     dom.sidebarOverlay.addEventListener('click', closeSidebar);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeSidebar();
+    });
 }
 
 function toggleSidebar() {
-    dom.sidebar.classList.toggle('open');
+    const isOpen = dom.sidebar.classList.toggle('open');
     dom.sidebarOverlay.classList.toggle('visible');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
 }
 
 function closeSidebar() {
     dom.sidebar.classList.remove('open');
     dom.sidebarOverlay.classList.remove('visible');
+    document.body.style.overflow = '';
 }
 
 function requestNotificationPermission() {

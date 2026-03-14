@@ -135,7 +135,11 @@ class SpjallServer
             case 'create_invite':
                 $this->handleCreateInvite($conn, $payload);
                 break;
-                
+
+            case 'get_roundtable_invite':
+                $this->handleGetRoundtableInvite($conn, $payload);
+                break;
+
             default:
                 $conn->sendError("Unknown event type: $type", 'UNKNOWN_EVENT');
         }
@@ -203,6 +207,36 @@ class SpjallServer
             $this->broadcastExcept('user_online', [
                 'user' => ['id' => $user['id'], 'nickname' => $user['nickname']]
             ], $conn->getId());
+        }
+
+        // Notify existing roundtable members about this user
+        $userConvs = Database::query(
+            "SELECT c.id as conversation_id FROM conversations c
+             INNER JOIN conversation_members cm ON c.id = cm.conversation_id
+             WHERE cm.user_id = ? AND c.type = 'group'",
+            [$user['id']]
+        );
+
+        foreach ($userConvs as $conv) {
+            $convId = (int)$conv['conversation_id'];
+            $invite = InviteService::getByConversationId($convId);
+            $spotsRemaining = $invite ? InviteService::getSpotsRemaining($invite['id']) : null;
+
+            $members = Database::query(
+                'SELECT user_id FROM conversation_members WHERE conversation_id = ? AND user_id != ?',
+                [$convId, $user['id']]
+            );
+
+            foreach ($members as $member) {
+                $this->sendToUser((int)$member['user_id'], 'member_joined', [
+                    'conversation_id' => $convId,
+                    'user' => [
+                        'id' => $user['id'],
+                        'nickname' => $user['nickname']
+                    ],
+                    'spots_remaining' => $spotsRemaining
+                ]);
+            }
         }
     }
 
@@ -510,6 +544,36 @@ class SpjallServer
         ]);
     }
 
+    /**
+     * Handle getting roundtable invite info
+     */
+    private function handleGetRoundtableInvite(Connection $conn, array $payload): void
+    {
+        $conversationId = (int)($payload['conversation_id'] ?? 0);
+        $userId = $conn->getUserId();
+
+        if (!$this->canAccessConversation($userId, $conversationId)) {
+            $conn->sendError('Not a member of this conversation', 'NOT_MEMBER');
+            return;
+        }
+
+        $invite = InviteService::getByConversationId($conversationId);
+        if ($invite === null) {
+            $conn->sendError('No invite link for this conversation', 'NO_INVITE');
+            return;
+        }
+
+        $spotsRemaining = InviteService::getSpotsRemaining($invite['id']);
+
+        $conn->sendEvent('roundtable_invite', [
+            'conversation_id' => $conversationId,
+            'code' => $invite['code'],
+            'url' => InviteService::getUrl($invite['code']),
+            'total_spots' => (int)$invite['total_spots'],
+            'spots_remaining' => $spotsRemaining
+        ]);
+    }
+
     // ========== Helper Methods ==========
 
     /**
@@ -602,7 +666,7 @@ class SpjallServer
                 [$conv['id'], $userId]
             );
 
-            $conversations[] = [
+            $convData = [
                 'id' => (int) $conv['id'],
                 'type' => $conv['type'],
                 'members' => array_map(fn($m) => [
@@ -610,6 +674,22 @@ class SpjallServer
                     'nickname' => $m['nickname']
                 ], $members)
             ];
+
+            // Include invite info for group conversations
+            if ($conv['type'] === 'group') {
+                $invite = InviteService::getByConversationId((int)$conv['id']);
+                if ($invite !== null) {
+                    $spotsRemaining = InviteService::getSpotsRemaining($invite['id']);
+                    $convData['invite'] = [
+                        'code' => $invite['code'],
+                        'url' => InviteService::getUrl($invite['code']),
+                        'total_spots' => (int)$invite['total_spots'],
+                        'spots_remaining' => $spotsRemaining
+                    ];
+                }
+            }
+
+            $conversations[] = $convData;
         }
 
         return $conversations;

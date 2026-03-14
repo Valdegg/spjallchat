@@ -209,10 +209,11 @@ class SpjallServer
             ], $conn->getId());
         }
 
-        // Notify existing roundtable members about this user
+        // Notify existing roundtable members about this user (only for groups with active invites)
         $userConvs = Database::query(
             "SELECT c.id as conversation_id FROM conversations c
              INNER JOIN conversation_members cm ON c.id = cm.conversation_id
+             INNER JOIN invites i ON i.conversation_id = c.id
              WHERE cm.user_id = ? AND c.type = 'group'",
             [$user['id']]
         );
@@ -220,7 +221,7 @@ class SpjallServer
         foreach ($userConvs as $conv) {
             $convId = (int)$conv['conversation_id'];
             $invite = InviteService::getByConversationId($convId);
-            $spotsRemaining = $invite ? InviteService::getSpotsRemaining($invite['id']) : null;
+            $spotsRemaining = $invite ? InviteService::getSpotsRemaining($invite['id']) : 0;
 
             $members = Database::query(
                 'SELECT user_id FROM conversation_members WHERE conversation_id = ? AND user_id != ?',

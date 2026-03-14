@@ -157,6 +157,12 @@ function handlePost(string $code): void
     try {
         $user = UserService::create($nickname, $password);
 
+        // Add user to Lobby (conversation_id = 1)
+        Database::execute(
+            'INSERT OR IGNORE INTO conversation_members (conversation_id, user_id, joined_at) VALUES (1, ?, ?)',
+            [$user['id'], time()]
+        );
+
         // Handle invite consumption based on type
         if ($invite['conversation_id'] !== null) {
             // Roundtable invite: claim spot and add to conversation
